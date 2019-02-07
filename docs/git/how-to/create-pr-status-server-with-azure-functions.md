@@ -2,18 +2,22 @@
 title: Use Azure Functions to create custom branch policies
 description: Create a serverless function to listen to pull request events and post status on the pull request status API.
 ms.assetid: 
-ms.prod: vs-devops-alm
-ms.technology: vs-devops-git
+ms.prod: devops
+ms.technology: devops-code-git
 ms.manager: douge
 ms.author: yohasna
-ms.date: 01/26/2018
+author: steved0x
+ms.topic: conceptual
+ms.date: 03/14/2018
+monikerRange: '>= tfs-2018'
 ---
+
 
 # Use Azure Functions to create custom branch policies
 
 #### VSTS | TFS 2018
 
-The pull request (PR) workflow provides developers with an opportunity to get feedback on their code from peers as well as from automated tools. 3rd party tools and services can participate in the PR workflow by using the PR [Status API](https://go.microsoft.com/fwlink/?linkid=854107). This article guides you through the process of creating a custom branch policy using [Azure Functions](https://azure.microsoft.com/en-us/services/functions/) to validate PRs in a VSTS Git repository. With Azure Functions you don’t have to worry about provisioning and maintaining servers, especially when your workload grows. Azure Functions provide a fully managed compute platform with high reliability and security.
+The pull request (PR) workflow provides developers with an opportunity to get feedback on their code from peers as well as from automated tools. 3rd party tools and services can participate in the PR workflow by using the PR [Status API](https://go.microsoft.com/fwlink/?linkid=854107). This article guides you through the process of creating a custom branch policy using [Azure Functions](https://azure.microsoft.com/en-us/services/functions/) to validate PRs in a VSTS Git repository. With Azure Functions you don't have to worry about provisioning and maintaining servers, especially when your workload grows. Azure Functions provide a fully managed compute platform with high reliability and security.
 
 For more information about PR status, see [Customize and extend pull request workflows with pull request status](../concepts/pull-request-status.md).
 
@@ -274,7 +278,7 @@ Now that your server is running and listening for service hook notifications, cr
 
     ![Add WIP to the default PR title](../_img/create-pr-status-server/new-pr-wip.png)
 
-6. Once the PR has been created, you will see the status section, with the **Work in progress** entry which links to the URL specfied in the payload.
+6. Once the PR has been created, you will see the status section, with the **Work in progress** entry which links to the URL specified in the payload.
 
     ![Add WIP to the default PR title](../_img/create-pr-status-server/pr-with-status.png)
 

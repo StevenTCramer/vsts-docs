@@ -1,11 +1,14 @@
 ---
-ms.prod: vs-devops-alm
-ms.technology: vs-devops-extensions-api
+ms.prod: devops
+ms.technology: devops-ecosystem
 title: Auth and Security | Extensions for VSTS
 description: Auth and secuirty for VSTS Extensions
 ms.assetid: c1704b14-66d2-4950-8633-a63fc8f88508
+ms.topic: conceptual
 ms.manager: douge
+monikerRange: '>= tfs-2017'
 ms.author: elbatk
+author: elbatk
 ms.date: 08/29/2016
 ---
 
@@ -41,6 +44,9 @@ To get this key, right-click a [published extension](../publish/overview.md) and
 
 ![key](./_img/get-extension-key.png)
 
+> [!WARNING]
+> Scope changes in an extension will cause the certificate to change. If you make changes to the scope, you will need a new extension key.
+
 ### Generate a token to provide to your service
 
 1. The Core SDK `getAppToken` method return a promise that, when resolved, contains a token signed with your extension's certificate.
@@ -59,15 +65,14 @@ Here is a sample of parsing the token.  First download and store the secret for 
 
 #### .NET Framework
 
-You will need to add 2 references to get this sample to compile.
+You will need to add 1 reference to get this sample to compile.
 
-1. Open the NuGet Package Manager and add a reference to *System.IdentityModel.Tokens.Jwt*. This sample was built with version 4.0.2.206221351 of this package.
-2. Right click on the references in your project and select "Add reference". Check *System.IdentityModel* and then click Ok.
+1. Open the NuGet Package Manager and add a reference to *System.IdentityModel.Tokens.Jwt*. This sample was built with version 5.2.2 of this package.
 
 ```
 using System.Collections.Generic;
-using System.IdentityModel.Tokens;
 using System.ServiceModel.Security.Tokens;
+using Microsoft.IdentityModel.Tokens;
 
 namespace TokenSample
 {
@@ -80,10 +85,7 @@ namespace TokenSample
 				
 			var validationParameters = new TokenValidationParameters()
 			{
-				IssuerSigningTokens = new List<BinarySecretSecurityToken>()
-				{
-					new BinarySecretSecurityToken (System.Text.UTF8Encoding.UTF8.GetBytes(secret))
-				},
+				IssuerSigningKey = new SymmetricSecurityKey(System.Text.UTF8Encoding.UTF8.GetBytes(secret)),
 				ValidateIssuer = false,
 				RequireSignedTokens = true,
 				RequireExpirationTime = true,

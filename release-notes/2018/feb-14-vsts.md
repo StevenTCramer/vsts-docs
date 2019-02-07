@@ -4,8 +4,8 @@ author: alexcnichols
 ms.author: alexn
 ms.date: 2/14/2018
 ms.topic: article
-ms.prod: vs-devops-alm
-ms.technology: vs-devops-articles
+ms.prod: devops
+ms.technology: vsts-release-notes
 ms.manager: douge
 description: In the Sprint 130 Update of Visual Studio Team Services (VSTS), we continue to improve our integration with tools and services that help you establish a full DevOps pipeline.
 hide_comments: true
@@ -18,12 +18,13 @@ In the **Sprint 130 Update** of Visual Studio Team Services (VSTS), we continue 
 Other highlights include:
 
 * [Mention a group in work item and pull request discussions](#mention-a-group-in-work-item-and-pull-request-discussions)
-* [Release from Azure Container Registry and Docker Hub](#release-from-azure-container-registry-and-docker-hub) and [only certain branches of builds from GitHub](#filter-branches-for-github-artifacts)
+* [Release automatically from Azure Container Registry and Docker Hub](#release-automatically-from-azure-container-registry-and-docker-hub) and [only certain branches of builds from GitHub](#filter-branches-for-github-artifacts)
 * Leverage what you may have in Jenkins with [finer control](#specify-a-default-version-for-jenkins-artifacts) and [efficiency using Azure Storage](#propagate-jenkins-artifacts-to-azure-storage)
 * [Manage access and extensions for large numbers of users using groups](#manage-access-and-extensions-for-large-numbers-of-users-using-groups)
 
-> [!NOTE]
-> The features discussed in this post will be rolling out over the next two to three weeks.
+## What’s new in VSTS
+
+> [!VIDEO https://www.youtube.com/embed/jttSjT460PI?rel=0]
 
 ## Code
 
@@ -51,7 +52,7 @@ When discussions about work items or pull requests include several people&#8212;
 
 ### Use VSTS as a symbol server
 
-VSTS Symbol Server, which enables you to host and share symbols with your organization, is now generally available. Symbols provide additional information that makes it easier to debug executables, especially those written in native languages like C and C++. See the [documentation for publishing symbols for debugging](/vsts/build-release/symbols/) for more information.
+VSTS Symbol Server, which enables you to host and share symbols with your organization, is now generally available. Symbols provide additional information that makes it easier to debug executables, especially those written in native languages like C and C++. See the [documentation for publishing symbols for debugging](/vsts/pipelines/symbols/) for more information.
 
 This feature was prioritized based on a top [suggestion](http://visualstudio.uservoice.com/forums/330519-visual-studio-team-services/suggestions/2564053-treat-tfs-as-an-enterprise-symbol-server).
 
@@ -69,7 +70,7 @@ So far you have been able to specify branches and tags that should trigger a rel
 > [!div class="mx-imgBorder"]
 ![Branch include and exclude filters](_img/130_12.png)
 
-### Release from Azure Container Registry and Docker Hub
+### Release automatically from Azure Container Registry and Docker Hub
 
 When deploying containerized apps, the container image is first pushed to a container registry. After the push is complete, the container image can be deployed to a Web App for Containers or a Kubernetes cluster. You can now enable automatic creation of releases on updates to the images stored in **Docker Hub** or **Azure Container Registry** by adding them as an artifact source.
 
@@ -98,12 +99,6 @@ Now, you can specify a default version for Jenkins artifacts, with the options y
 > [!div class="mx-imgBorder"]
 ![Default version for Jenkins artifacts](_img/130_10.png)
 
-### Deploy ASP.NET apps to VMs using an Azure DevOps Project
-
-You can now use an **Azure DevOps Project** to setup a fully-configured CI/CD pipeline to **Azure Virtual Machine** (VM) resources for ASP.NET or ASP.NET Core applications. The **DevOps Project** sets up everything you need for developing, deploying, and monitoring your app on the VM.
-
-By creating a **DevOps Project**, an Azure VM is provisioned and comes with a Git code repository, **Application Insights** integration, and a continuous delivery pipeline. The dashboard then lets you monitor code commits, builds, and deployments from a single view in the Azure portal.
-
 ### Scope a variable group to specific environments
 
 Previously, when a variable group was added to a release definition, the variables it contained were available to all the environments in the release. Now, you have the flexibility to scope the variable groups to specific environment(s) instead, which makes them available to one environment but not other environments of the same release. This is great when you have an external service, such as an SMTP email service, which is different between environments.
@@ -131,7 +126,7 @@ For now, these benefits apply only to feeds created after this announcement, unl
 
 ### View quality of a package version in the package list
 
-On the package list, you can now see the view(s) of each package version to quickly determine their quality. See the [release views](/vsts/package/concepts/feeds/views) documentation for more information.
+On the package list, you can now see the view(s) of each package version to quickly determine their quality. See the [release views](/vsts/package/concepts/views) documentation for more information.
 
 > [!div class="mx-imgBorder"]
 ![Views in package list](_img/130_02.png)
@@ -163,7 +158,7 @@ We’ve made it easy for administrators to manage large groups of users by enabl
 > [!div class="mx-imgBorder"]
 ![Group licensing](_img/130_07.png)
 
-See the [large account user management roadmap post](https://blogs.msdn.microsoft.com/devops/2017/04/04/team-services-large-account-user-management-roadmap-april-2017/) on the Microsoft DevOps Blog from last year for more information.
+See the [large account user management roadmap post](https://blogs.msdn.microsoft.com/devops/2017/04/04/team-services-large-account-user-management-roadmap-april-2017/) on the Microsoft DevOps Blog from last year and the [Assign access levels and extensions to users by group membership](/vsts/accounts/assign-access-levels-and-extensions-by-group-membership) documentation for more information.
 
 ### Reduced latency for AAD group membership changes
 

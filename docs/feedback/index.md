@@ -1,17 +1,20 @@
 ---
-title: Feedback index to content for VSTS & TFS
-description: Index to topics for requesting and providing feedback in VSTS or TFS    
-ms.technology: collaborate
-ms.prod: vs-devops-alm
+title: Feedback index to content
+titleSuffix: VSTS & TFS 
+description: Index to topics for requesting and providing feedback in Visual Studio Team Services & Team Foundation Server   
+ms.technology: devops-collab
+ms.prod: devops
+ms.topic: overview
 ms.assetid:  
 ms.manager: douge
 ms.author: kaelli
+monikerRange: '>= tfs-2013'
 ms.date: 09/19/2017
 ---
 
 # Feedback 
  
-[!INCLUDE [temp](../_shared/version-vsts-tfs-all-versions.md)]
+[!INCLUDE [temp](../_shared/version-vsts-tfs-all-versions.md)]
 
 You can request feedback using one of two tools, through the Test & Feedback extension or through the Request feedback link you access from a dashboard. 
 
@@ -29,9 +32,9 @@ You can request feedback using one of two tools, through the Test & Feedback ext
 -->
 
 ## How-to Guides
-- [Request feedback (Test & Feedback extension)](/vsts/manual-test/stakeholder/request-stakeholder-feedback?toc=/vsts/feedback/toc.json&bc=/vsts/feedback/breadcrumb/toc.json )
+- [Request feedback (Test & Feedback extension)](/vsts/test/request-stakeholder-feedback?toc=/vsts/feedback/toc.json&bc=/vsts/feedback/breadcrumb/toc.json )
 - [Get feedback (Work tracking)](get-feedback.md) 
-- [Provide feedback with the Test & Feedback extension](/vsts/manual-test/stakeholder/provide-stakeholder-feedback?toc=/vsts/feedback/toc.json&bc=/vsts/feedback/breadcrumb/toc.json )  
+- [Provide feedback with the Test & Feedback extension](/vsts/test/provide-stakeholder-feedback?toc=/vsts/feedback/toc.json&bc=/vsts/feedback/breadcrumb/toc.json )  
 - [Provide feedback with the Feedback client](give-feedback.md )  
 - [Set feedback permissions](give-permissions-feedback.md)  
 

@@ -1,88 +1,77 @@
 ---
-title: Set up billing for VSTS 
-description: Use an Azure subscription to pay for users, CI/CD concurrency, extensions, and cloud-based load testing for VSTS
-ms.prod: vs-devops-alm
-ms.technology: vs-devops-setup
+title: Start to set up your billing account for VSTS
+description: Use an Azure subscription to pay for users, CI/CD concurrency, extensions, and cloud-based load testing for VSTS (Visual Studio Team Services)
+ms.prod: devops
+ms.technology: devops-billing
 ms.assetid: 87b994d6-2a92-46e5-b667-afe4eb198e25
+ms.topic: quickstart
 ms.manager: douge
 ms.author: chcomley
-ms.date: 1/29/2018
+author: chcomley
+ms.date: 05/17/2018
 ---
+[//]: # (monikerRange: 'vsts')
 
-#  Set up billing for your VSTS account
+# Quickstart: Set up billing for your VSTS account
 
 **VSTS**
 
-During your first purchase for your VSTS account, we'll prompt you to select the Azure subscription to use for billing. All VSTS services are billed via Azure, 
-though you are not required to use any other Azure services. 
- 
-These are the paid services offered by Microsoft:
-* [VSTS users](https://marketplace.visualstudio.com/items?itemName=ms.vss-vstsuser)
-* [CI/CD - hosted pipelines](https://marketplace.visualstudio.com/items?itemName=ms.build-release-hosted-pipelines)
-* [CI/CD - private pipelines](https://marketplace.visualstudio.com/items?itemName=ms.build-release-private-pipelines)
-* [Test Manager](https://marketplace.visualstudio.com/items?itemName=ms.vss-testmanager-web)
-* [Package Management](https://marketplace.visualstudio.com/items?itemName=ms.feed)
+Make a purchase in the [Visual Studio Marketplace](https://marketplace.visualstudio.com/) to set up billing for your VSTS account. During that process we'll prompt you for an Azure subscription where charges should apply and allow you to create a new Azure subscription if you don't have one already.
+This quickstart will help you set up billing for your VSTS account in advance of making purchases, so that you'll have this in place once you're ready to buy, however the preferred method is to simply make an initial purchase.
 
-## What do I need to set up billing?
+**All VSTS services are billed via Azure**, and you are not required to use any other Azure services.
 
-Microsoft Azure handles billing for your VSTS account, 
-so you'll need:
+If you don't have an Azure subscription, [create one](https://azure.microsoft.com/en-us/free/?WT.mc_id=A261C142F) before you begin. Please note that the Azure Free Trial is not supported.
 
-* [VSTS project collection administrator or account owner permissions](faq-billing-setup.md#find-owner).
+## Prerequisites
 
-<a name="EligibleAzureSubscription"></a>
+The first time that you set up billing for your VSTS account - whether you do this via the Azure portal or as part of making a purchase in the Visual Studio Marketplace, you will need:
 
-* An Azure subscription to bill your purchases. 
-You must have at least [an **owner** or **contributor** role](add-backup-billing-managers.md) 
-to link this Azure subscription to your VSTS account.
+* [VSTS project collection administrator or account owner permissions](../accounts/faq-add-delete-users.md#find-owner)
+* [An Azure subscription you can use to purchase](https://docs.microsoft.com/en-us/vsts/billing/add-backup-billing-managers?view=vsts)
 
-    [Sign up for an Azure subscription](https://portal.azure.com), 
-    if you don't have one. Or have an Azure administrator 
-    [add you as an **owner** or **contributor** role](add-backup-billing-managers.md) 
-    to an Azure subscription that you can use to bill purchases. 
-    Make sure to use the same email address 
-    that you sign in to VSTS with for this activity.
+To make subsequent edits to paid quantities in your VSTS account, you only need have access to purchase on the Azure subscription.
 
-    You can also link this Azure subscription to your VSTS 
-    account in the [Azure portal](https://portal.azure.com).  Your 
-    Azure subscription has all the necessary billing information, 
-    so you won't set this up separately for your VSTS account.
-    [How does Azure billing work?](faq-billing-setup.md#azure-billing)
-
-    If you've lost access to your Azure subscription, 
-    contact [Azure Support](http://azure.microsoft.com/en-us/support/options/).
-
-<a name="Link"></a>
-<a name="AzurePortal"></a>
 ## Set up billing via the Azure Portal
 
-0. [Sign in to the Azure portal](https://portal.azure.com/) 
-as VSTS account owner and as Azure subscription co-administrator or greater.
-   
- [Browser problems in Azure?](https://azure.microsoft.com/en-us/documentation/articles/azure-preview-portal-supported-browsers-devices/)
+If you'd like to set up billing for your account prior to buying something in the Visual Studio Marketplace, you can do so from within the Azure portal.
 
-0. Go to **More services** > **Developer tools** > **VSTS accounts**. 
-Select your VSTS account.
+1. [Sign in to the Azure portal](https://portal.azure.com/) as VSTS account owner and as Azure subscription co-administrator or greater.
 
-    ![More services, Developer tools, VSTS accounts, select your account](_img/set-up-billing/ap_vso_startlink2.png)
+    [Browser problems in Azure?](https://azure.microsoft.com/documentation/articles/azure-preview-portal-supported-browsers-devices/)
 
-0. Choose the **Link** button.
+2. Enter *Team Services accounts* into the search box at the top of your screen and then select **Team Services accounts** in the drop-down menu.
 
- ![Choose Link button over middle panel](_img/set-up-billing/ap-vso-selectlink2.png)
+    > [!div class="mx-imgBorder"]
+![More services, Developer tools, VSTS accounts, select your account](_img/set-up-billing/azure-portal-team-services-accounts.png)
 
-0. Select your Azure subscription. 
+3. Select your account.
 
- ![Select an Azure subscription](_img/set-up-billing/ap_vso_selectsubscription.png)
+   > [!div class="mx-imgBorder"]
+![Azure portal select your account](_img/set-up-billing/azure-portal-select-your-account.png)
 
- After Azure sets up the link, your VSTS account appears linked to your Azure subscription. 
+4. Choose **Link**.
 
- ![Your VSTS account is now linked to your Azure subscription](_img/set-up-billing/ap_vso_linked.png)
+    > [!div class="mx-imgBorder"]
+![Choose Link button over middle panel](_img/set-up-billing/azure-portal-select-link.png)
 
-## Related information
+5. Select your Azure subscription and then choose **Link**.
 
-- [Billing overview](overview.md)
-- [Add backup billing managers](add-backup-billing-managers.md)
-- [Change the Azure subscription for billing](change-azure-subscription.md)
-- [VSTS pricing](https://azure.microsoft.com/pricing/details/visual-studio-team-services/)
-- [VSTS billing support](https://www.visualstudio.com/team-services/support/)
-- [Troubleshooting](faq-billing-setup.md)
+   > [!div class="mx-imgBorder"]
+![Select an Azure subscription](_img/set-up-billing/azure-portal-select-subscription.png)
+
+ After Azure sets up the link, your VSTS account appears linked to your Azure subscription.
+
+> [!div class="mx-imgBorder"]
+![Your VSTS account is now linked to your Azure subscription](_img/set-up-billing/azure-portal-linked-to-vsts-account.png)
+
+## Next steps
+
+> [!div class="nextstepaction"]
+> [Pay for users](buy-basic-access-add-users.md)
+
+## Related articles
+
+* [Billing FAQ](https://docs.microsoft.com/en-us/vsts/billing/vsts-billing-faq?view=vsts)
+* [Add a backup billing manager](add-backup-billing-managers.md)
+* [Change the subscription](https://docs.microsoft.com/en-us/vsts/billing/change-azure-subscription?view=vsts) for billing.

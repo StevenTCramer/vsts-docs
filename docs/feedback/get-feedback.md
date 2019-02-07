@@ -1,11 +1,14 @@
 ---
 title: Request feedback using the work tracking feedback tool
-description: Ask reviewers to provide videos, screenshots, type-written comments, and ratings on your application   developed using Visual Studio Team Services (VSTS) and Team Foundation Server (TFS)  
-ms.technology: vs-devops-wit
-ms.prod: vs-devops-alm
+titleSuffix: VSTS & TFS 
+description: Ask reviewers to provide videos, screenshots, type-written comments, and ratings on your application developed using Visual Studio Team Services & Team Foundation Server  
+ms.prod: devops
+ms.technology: devops-collab
+ms.topic: conceptual
 ms.assetid: b8fc1618-6501-41dd-86a6-78290bb84dcd  
 ms.manager: douge
 ms.author: kaelli
+monikerRange: '>= tfs-2013'
 ms.date: 08/15/2017
 ---
 
@@ -15,7 +18,7 @@ ms.date: 08/15/2017
 
 >**Feature availability**: For Visual Studio Team Services (VSTS) and TFS 2015.1 or later versions, you can request feedback with a [Basic license](https://www.visualstudio.com/pricing/visual-studio-online-feature-matrix-vs). For Team Foundation Server (TFS) 2015 or earlier versions, you need to belong to the [Advanced access level](../security/change-access-levels.md) to request feedback. 
 >
->In addition, you can now [request feedback from stakeholders for web apps using the Test &amp; Feedback extension](../manual-test/stakeholder/request-stakeholder-feedback.md). For desktop apps, you must use the feedback request form documented in this topic and stakeholders must reply using the Microsoft Feedback Client. 
+>In addition, you can now [request feedback from stakeholders for web apps using the Test &amp; Feedback extension](../test/request-stakeholder-feedback.md). For desktop apps, you must use the feedback request form documented in this topic and stakeholders must reply using the Microsoft Feedback Client. 
  
 Once you have working software, you're ready to get feedback from your stakeholders. You can ask reviewers to provide videos, screenshots, type-written comments, and ratings. Their feedback is captured into work items that you can review and use to create a bug or suggest a new backlog item. 
 
@@ -28,9 +31,9 @@ To request feedback, you fill out a form that generates an email request to your
 
 	![Request feedback link in Homepage](_img/request-feedback-link.png)  
 
-	<blockquote style="font-size: 13px"><b>Note: </b>If your on-premises TFS team project was upgraded from TFS 2010 or earlier version, you may have to update your team project using the [Configure Features wizard](../work/customize/configure-features-after-upgrade.md).</blockquote>  
+	<blockquote style="font-size: 13px"><b>Note: </b>If your on-premises TFS team project was upgraded from TFS 2010 or earlier version, you may have to update your team project using the [Configure Features wizard](../work/customize/configure-features-after-upgrade.md).</blockquote>  
 
-	If the following message appears, you need to [configure an SMTP server](../tfs-server/admin/setup-customize-alerts.md).
+	If the following message appears, you need to [configure an SMTP server](/tfs/server/admin/setup-customize-alerts).
 
 	![Error message about email notifications not configured](_img/ALM_GF_SMTPServer.png)  
 

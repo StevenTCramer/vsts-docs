@@ -1,15 +1,17 @@
 ---
 title: Set up Visual Studio with VSTS
 description: Share code with Git and manage work with Agile tools in Visual Studio Team Services (VSTS) for continuous integration and continuous delivery
-ms.prod: vs-devops-alm
-ms.technology: vs-devops-setup
+ms.prod: devops
+ms.technology: devops-accounts
 ms.assetid: abf70640-8fb2-4def-9237-21276a39b5ad
+ms.topic: conceptual
 ms.manager: douge
 ms.author: chcomley
+author: chcomley
 ms.date: 10/17/2017
+monikerRange: 'vsts'
 ---
-
-#	Set up Visual Studio with VSTS
+# Set up Visual Studio with VSTS
 
 **VSTS**
 
@@ -28,7 +30,7 @@ test early, and ship faster.
 > To set up Visual Studio without VSTS, 
 > learn how to [get started here](https://msdn.microsoft.com/library/e2h7fzkw.aspx). 
 > To host your own server, 
-> learn how to [install and set up Team Foundation Server](../tfs-server/install/get-started.md).
+> learn how to [install and set up Team Foundation Server](/tfs/server/install/get-started).
 
 VSTS is free for 
 [up to 5 users with access to Basic features](https://www.visualstudio.com/products/visual-studio-team-services-feature-matrix-vs) 
@@ -37,7 +39,7 @@ and for unlimited [Visual Studio subscribers](https://www.visualstudio.com/produ
 Learn [what else you get with VSTS](https://www.visualstudio.com/pricing/visual-studio-team-services-pricing-vs). 
 If you want, you can also use VSTS with any IDE or code editor, like:
 
-*	[Eclipse, Android Studio, or IntelliJ](http://java.visualstudio.com/Docs/tools/intro)
+*	[Eclipse, Android Studio, or IntelliJ](/vsts/java)
 *	Xcode (see [Git](../git/share-your-code-in-git-xcode.md) or [TFVC](../tfvc/share-your-code-in-tfvc-xcode.md))
 *	[Visual Studio Code](https://code.visualstudio.com/docs/editor/versioncontrol)
 

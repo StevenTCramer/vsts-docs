@@ -1,8 +1,8 @@
 ---
 title: Multiple activities per team member – Jul 17
 description: VSTS release notes for July 17 2015
-ms.prod: vs-devops-alm
-ms.technology: vs-devops-articles
+ms.prod: devops
+ms.technology: vsts-release-notes
 ms.manager: douge
 ms.assetid: 8262711a-b981-49ea-ad6f-442ae416dfd0
 ms.date: 06/01/2016
@@ -52,7 +52,7 @@ To learn more about this feature, see [Build your GitHub-hosted projects in Visu
 
 ##New Visual Studio Online integrations
 
-The number of tools and services that integrate with Visual Studio Online continues to grow! Check them all out in the [Visual Studio Online Integrations(https://www.visualstudio.com/explore/vso-integrations-directory-vs)] directory, including these services new to the directory:
+The number of tools and services that integrate with Visual Studio Online continues to grow! Check them all out in the [Visual Studio Online Integrations](https://www.visualstudio.com/explore/vso-integrations-directory-vs) directory, including these services new to the directory:
 
 - [Aha](http://go.microsoft.com/fwlink/?LinkId=618521)!: helps busy product managers create brilliant product strategy and roadmaps. The Visual Studio Online integration enables you to push work item updates in your team projects to your Aha! products, and to open new work items directly from Aha!
 - [GitHub](http://go.microsoft.com/fwlink/?LinkId=618519): build/continuous integration support for GitHub repositories right from Visual Studio Online.

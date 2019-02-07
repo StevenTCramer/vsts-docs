@@ -1,18 +1,20 @@
 ---
-title: Configure or add a project portal | TFS
-description: How the SharePoint project portal provides access to shared documents, dashboards, and support files-Team Foundation Server (TFS)
-ms.prod: visual-studio-tfs-dev14
-ms.technology: vs-devops-reporting
+title: Configure or add a project portal 
+titleSuffix: TFS
+description: How the SharePoint project portal provides access to shared documents, dashboards, and support files-Team Foundation Server  
+ms.prod: devops
+ms.technology: devops-analytics
 ms.assetid: 63eae10a-b4d6-4ef5-93fd-270d20a8a2cf
 ms.manager: douge
 ms.author: kaelli
+author: KathrynEE
 ms.date: 03/09/2017
-ms.topic: get-started-article
+ms.topic: tutorial
 ---
 
 # Configure or add a project portal
 
-[!INCLUDE [temp](../_shared/tfs-report-platform-version.md)]
+[!INCLUDE [temp](../_shared/tfs-sharepoint-version.md)]
 
 The project portal is a site associated with a team project for the purposes of sharing information. Project portals that are created when the team project is created are associated with a SharePoint site. These [portals](share-information-using-the-project-portal.md) provide access to shared documents, dashboards, and support files that contain redirect links to MSDN process guidance topics.  
   
@@ -75,8 +77,8 @@ The project portal is a site associated with a team project for the purposes of 
   
 ##  <a name="addsp"></a> Add SharePoint site integration and upload portal contents from a process template  
  Choose this option to gain access to Excel reports, dashboards, and process guidance support.  To add the portal to the team project, use the **tfpt** command line tool that TFS Power Tools provides.  
-  
-1.  [Add SharePoint products to your deployment](../../tfs-server/admin/add-sharepoint-to-tfs.md).  
+
+1.  [Add SharePoint products to your deployment](/tfs/server/admin/add-sharepoint-to-tfs).  
   
 2.  Verify that you have the following tools, configurations, and permissions.  
   

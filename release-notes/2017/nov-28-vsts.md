@@ -4,8 +4,8 @@ author: alexcnichols
 ms.author: alexn
 ms.date: 11/28/2017
 ms.topic: article
-ms.prod: vs-devops-alm
-ms.technology: vs-devops-articles
+ms.prod: devops
+ms.technology: vsts-release-notes
 ms.manager: douge
 description: Visual Studio Team Services (VSTS) release notes for Sprint 126 Update on November 28, 2017.
 hide_comments: true
@@ -65,8 +65,8 @@ steps:
 
 After you commit the changes, a build definition is automatically created and queued! Ready to go beyond “hello world”?
 
-- [Get started configuring your CI Build in code using YAML](/vsts/build-release/actions/build-yaml-get-started)
-- [How to use YAML builds](/vsts/build-release/actions/build-yaml)
+- [Get started configuring your CI Build in code using YAML](/vsts/pipelines/actions/build-yaml-get-started)
+- [How to use YAML builds](/vsts/pipelines/actions/build-yaml)
 
 ### Release gates in Public Preview ![Release tag](_img/release-notes-tag_release.png)
 
@@ -88,11 +88,11 @@ At the time of execution, the **Release** starts to sample all the gates and col
 
 Initial samples from the monitoring systems may not be accurate, as not enough information may be available for the new deployment. The “Delay before evaluation” option ensures the **Release** does not progress during this period, even if all samples are successful.
 
-No agents or pipelines are consumed during sampling of gates. See the [documentation for release gates](/vsts/build-release/concepts/definitions/release/approvals/gates) for more information.
+No agents or pipelines are consumed during sampling of gates. See the [documentation for release gates](/vsts/pipelines/release/approvals/gates) for more information.
 
 ### Hosted Mac agents for CI/CD pipelines in Public Preview ![Build tag](_img/release-notes-tag_build.png)
 
-VSTS now has cloud-hosted CI/CD agents running on macOS. This allows building and releasing Apple apps in the cloud (including iOS, macOS, tvOS, and watchOS), eliminating the need for providing and maintaining your own dedicated Mac hardware. VSTS now offers hosted CI/CD agents running on three operating systems – Linux, macOS, and Windows. For more information, see [Hosted agents](/vsts/build-release/concepts/agents/hosted).
+VSTS now has cloud-hosted CI/CD agents running on macOS. This allows building and releasing Apple apps in the cloud (including iOS, macOS, tvOS, and watchOS), eliminating the need for providing and maintaining your own dedicated Mac hardware. VSTS now offers hosted CI/CD agents running on three operating systems – Linux, macOS, and Windows. For more information, see [Hosted agents](/vsts/pipelines/agents/hosted).
 
 To use the hosted macOS agents, select **Hosted macOS Preview** for your build or release pipeline:
 
@@ -265,7 +265,7 @@ Within **Version Control** administration, if you want to merely edit the reposi
 > [!IMPORTANT]
 > To use this capability, you must have the **Symbol server** [preview feature](/vsts/collaborate/preview-features) enabled on your account.
 
-VSTS Symbol Server enables you to host and share symbols with your organization. Symbols provide additional information that makes it easier to debug executables, especially those written in native languages like C and C++. See the [documentation for publishing symbols for debugging](/vsts/build-release/symbols/) for more information.
+VSTS Symbol Server enables you to host and share symbols with your organization. Symbols provide additional information that makes it easier to debug executables, especially those written in native languages like C and C++. See the [documentation for publishing symbols for debugging](/vsts/pipelines/symbols/) for more information.
 
 > [!div class="mx-imgBorder"]
 ![Symbol server task](_img/126_32.png)
@@ -278,9 +278,9 @@ Your build process is defined by the tasks it performs. Until now, all these tas
 
 We’ve added some agentless build tasks to the catalog:
 
-- [Delay](/vsts/build-release/tasks/utility/delay)
-- [Invoke REST API](/vsts/build-release/tasks/utility/http-rest-api)
-- [Publish to Azure Service Bus](/vsts/build-release/tasks/utility/publish-to-azure-service-bus)
+- [Delay](/vsts/pipelines/tasks/utility/delay)
+- [Invoke REST API](/vsts/pipelines/tasks/utility/http-rest-api)
+- [Publish to Azure Service Bus](/vsts/pipelines/tasks/utility/publish-to-azure-service-bus)
 
 You can add an agentless phase to your build definition and then add one of these tasks to run it on VSTS.
 
@@ -289,7 +289,7 @@ You can also extend and add your own agentless tasks, but there are some restric
 - Agentless tasks cannot run scripts.
 - You must select one of the pre-defined execution handlers: HttpRequest handler to call an HTTP endpoint, or ServiceBus handler to post a message on the Azure service bus.
 
-For examples on how to create such tasks, see the [InvokeRestAPI](https://github.com/Microsoft/vsts-tasks/tree/master/Tasks/InvokeRestApi) and [PublishToAzureServiceBus](https://github.com/Microsoft/vsts-tasks/tree/master/Tasks/PublishToAzureServiceBus) tasks.
+For examples on how to create such tasks, see the [InvokeRestAPI](https://github.com/Microsoft/vsts-tasks/tree/master/Tasks/InvokeRestApiV1) and [PublishToAzureServiceBus](https://github.com/Microsoft/vsts-tasks/tree/master/Tasks/PublishToAzureServiceBusV1) tasks.
 
 ### Apple provisioning profiles can be installed from source repositories
 
@@ -300,7 +300,7 @@ The **Install Apple Provisioning Profile** task already supports installing (on 
 
 ### Secure files can be downloaded to agents during build or release
 
-The new **Download Secure File** task supports downloading (to agent machines) encrypted files from the **VSTS Secure Files** library. As the file is downloaded, it is decrypted and stored on the agent’s disk. When the build or release completes, the file is deleted from the agent. This allows your build or release to use sensitive files, such as certificates or private keys, that are otherwise securely encrypted and stored in VSTS. For more information, see [Secure files documentation](/vsts/build-release/concepts/library/secure-files).
+The new **Download Secure File** task supports downloading (to agent machines) encrypted files from the **VSTS Secure Files** library. As the file is downloaded, it is decrypted and stored on the agent’s disk. When the build or release completes, the file is deleted from the agent. This allows your build or release to use sensitive files, such as certificates or private keys, that are otherwise securely encrypted and stored in VSTS. For more information, see [Secure files documentation](/vsts/pipelines/library/secure-files).
 
 ### Specific Java Development Kits (JDKs) can be installed during builds and releases
 
@@ -318,9 +318,9 @@ Updates to the Hosted VS2017 pool include Visual Studio 15.4.0, as well as updat
 
 ### Docker Hub or Azure Container Registry as an artifact source
 
-This feature enables automatic creation of releases for updates to apps in the images stored in a Docker Hub registry or an Azure Container Registry (ACR). This is a first step towards supporting scenarios such as rolling out new changes region-by-region by using the geo-replication feature of ACR or deploying to an environment (such as production) from a container registry that has images for only the production environment.
+This feature enables releases to use images stored in a Docker Hub registry or an Azure Container Registry (ACR). This is a first step towards supporting scenarios such as rolling out new changes region-by-region by using the geo-replication feature of ACR or deploying to an environment (such as production) from a container registry that has images for only the production environment.
 
-You can now configure Docker Hub or ACR as a first-class artifact in the **+ Add** artifact experience of a release definition.
+You can now configure Docker Hub or ACR as a first-class artifact in the **+ Add** artifact experience of a release definition. For now the release has to be triggered manually or by another artifact but we look forward to adding a trigger based on the push of a new image to the registry soon.
 
 > [!div class="mx-imgBorder"]
 ![Dockerhub artifact source](_img/126_25.png)
@@ -367,6 +367,13 @@ NuGet.org as an upstream source is now available, which enables you to use packa
 
 > [!div class="mx-imgBorder"]
 ![NuGet upstream source](_img/126_17.png)
+
+### Maven support now generally available
+
+Maven packages enable Java developers to easily share code and components. Check out our [getting started guide](https://go.microsoft.com/fwlink/?linkid=848427) for how to share Maven artifacts using Package Management.
+
+> [!div class="mx-imgBorder"]
+![Maven feed connect](_img/126_39.png)
 
 ### Easier feed creation and editing
 

@@ -1,17 +1,20 @@
 ---
-title: Arrange requirements into a product plan | VSTS & TFS
+title: CMMI process guidance, Arrange requirements in a product plan
+titleSuffix: VSTS & TFS
 description: Obtain and arrange a plan, starting from a set of requirements - Team Foundation Server (TFS)
-ms.prod: visual-studio-tfs-dev14
-ms.technology: vs-devops-wit
+ms.prod: devops
+ms.technology: devops-agile
 ms.assetid: 83ade2b1-dd94-489e-bf6d-42391eea6171
-ms.author: kaelli
+ms.topic: conceptual
+ms.author: kaelli  author: KathrynEE 
 ms.manager: douge
+monikerRange: '>= tfs-2013'
 ms.date: 01/20/2017 
 ---
 
 # Arrange requirements into a product plan
 
-[!INCLUDE [temp](../../../_shared/dev15-version-header.md)]
+[!INCLUDE [temp](../../../_shared/dev15-version-header.md)]
 
 After you analyze your customer requirements sufficiently to understand what the product should do, you must work out a plan to implement the product. Or, for an existing product, you must work out what functionality is missing and work out a plan for making the changes. But the requirements do not automatically tell you the plan.  
   
@@ -36,7 +39,7 @@ After you analyze your customer requirements sufficiently to understand what the
   
 -   You can represent these requirements as work items of type requirement, with the Requirement Type field set to Scenario or Quality of Service. For more information, see [Develop requirements](guidance-develop-requirements.md).  
   
--   These requirement work items should be linked to system tests so that you can ensure that all the requirements are tested. See [Create a test plan](../../../../manual-test/getting-started/create-a-test-plan.md).  
+-   These requirement work items should be linked to system tests so that you can ensure that all the requirements are tested. See [Create a test plan](../../../../test/create-a-test-plan.md).  
   
 -   [View the backlog](../../../backlogs/create-your-backlog.md) or open the Customer Requirement query to list these requirement work items.  
   

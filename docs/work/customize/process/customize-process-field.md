@@ -1,12 +1,14 @@
 ---
-title: Add a custom field | VSTS  
-description: Add a custom field to the web form of a work item type for an Inheritance process model for Visual Studio Team Services (VSTS)
-ms.technology: vs-devops-wit
-ms.prod: vs-devops-alm
+title: Add a custom field
+titleSuffix: VSTS 
+description: Add a custom field to the web form of a work item type for an Inheritance process model for Visual Studio Team Services
+ms.technology: devops-agile
+ms.prod: devops
 ms.assetid: D6616411-43D4-4A81-8951-772D98BD1569  
 ms.manager: douge
-ms.author: kaelli
-ms.date: 11/07/2017 
+ms.author: kaelliauthor: KathrynEE
+monikerRange: 'vsts'
+ms.date: 03/20/2018
 ---
 
 # Add a custom field to a work item type (Inheritance process model)  
@@ -52,17 +54,18 @@ You can add fields and specify the group and page where they should appear. Also
 
 0. Open the admin context Process hub from a work item form or by choosing the Account Settings option from the gear option. For details, see [Customize a process, Start customizing](customize-process.md#start-customizing).
 
-	>[!IMPORTANT]  
-	>If you don't see the Account settings option, then you are working from an on-premises TFS. The Process page isn't supported. You must use the features supported for the On-premises XML process model as described in [Customize your work tracking experience](../customize-work.md).
+	> [!IMPORTANT]  
+	>If you don't see the Account settings option, then you are working from an on-premises TFS. The **Process** page isn't supported. You must use the features supported for the [On-premises XML process model](../on-premises-xml-process-model.md).
 	
 0. With the WIT selected, click the ![add new field icon](_img/new-field-icon.png) (New Field icon).  
 
-    <img src="_img/cpfield-bug-new-field.png" alt="Process Work Item Types page, Add a field to a WIT" style="border: 1px solid #C3C3C3;" /> 
+	> [!div class="mx-imgBorder"]  
+	> ![Process Work Item Types page, Add a field to a WIT](_img/field/bug-new-field.png) 
 
 0. Name the field and select the field type from one of the supported data types. Optionally, add a description.  
 
-	>[!NOTE]  
-	>You must specify a field name that is unique within the account. A custom field defined for one process cannot be the same as the name defined for another process. For more information on field names, see [What is a field? How are field names used?](#field-reference)
+	> [!NOTE]    
+	> You must specify a field name that is unique within the account. A custom field defined for one process cannot be the same as the name defined for another process. For more information on field names, see [What is a field? How are field names used?](#field-reference)
 	
 	Here we add an Integer field labeled Customer Ticket. 
 
@@ -80,7 +83,7 @@ You can add fields and specify the group and page where they should appear. Also
 
 	<img src="_img/cpfield-customer-ticket-layout.png" alt="Add a field to Use story, specify layout" style="border: 1px solid #C3C3C3;" />  
 
-	>[!NOTE]  
+	> [!NOTE]    
 	>While you can change the form label, you must use the field name when adding fields to cards ([Kanban](../customize-cards.md#fields), [task board](../customize-cards.md#task-board)) or [creating queries](../../track/using-queries.md) based on the field.   
 
 0.	Click **Add field** to complete adding the field. If you haven't specified it's layout location, it will be added to the first group of fields on the layout form.  
@@ -89,9 +92,8 @@ You can add fields and specify the group and page where they should appear. Also
 
 	Here, we show the Customer Ticket field has been added to the Status group. You may need to refresh your browser to see the changes. 
 
-	<img src="_img/cpfield-bug-form-customized-customer-ticket.png" alt="Bug form, Customer Ticket field added to Details group" style="border: 2px solid #C3C3C3;" />
- 
-
+	> [!div class="mx-imgBorder"]  
+	> ![Bug form, Customer Ticket field added to Details group](_img/cpfield-bug-form-customized-customer-ticket.png) 
 
 <a id="pick-list">  </a>
 ### Add a pick list  
@@ -138,7 +140,8 @@ Use the Identity field to add a field similar to the Assigned To field. Identity
 
 2. The field is added to the first column under all system-defined rich-text fields, but before the Discussion control.   
 
-	<img src="_img/customize-process-field-show-custom-html-field-up1.png" alt="Bug form, Customer request field added to first column in form" style="border: 1px solid #C3C3C3;" />   
+	> [!div class="mx-imgBorder"]  
+	> ![Bug form, Customer request field added to first column in form](_img/customize-process-field-show-custom-html-field-up1.png) 
 
 <a id="boolean-field">  </a>
 ### Add a checkbox field  
@@ -155,7 +158,7 @@ Use the Identity field to add a field similar to the Assigned To field. Identity
 
 4. By default, the field is added to the last group defined in the second column. Open the Layout tab to drag and drop the field to another group on the form.  
 
-	>[!NOTE]  
+	> [!NOTE]    
 	>The field will appear as a checkbox in the work item form. Check the box to indicate a True value. If you display the field on the Kanban or Task board, then the field values of True and False display (not a checkbox). 
 
 <a id="add-existing-field">  </a>
@@ -178,10 +181,10 @@ Optionally, specify the [Required/Default values](#options) and [placement withi
 
 You can choose to show or hide an inherited field or a custom control from appearing on a form. For custom fields, you can remove it from the form. If you want to reinstate it later, you can add it back to the form. These actions differ from the [**Delete**](#delete-field) option, which deletes the field from the account.
 
->[!NOTE]    
+> [!NOTE]      
 >Data defined for an inherited field, even if you hide it, is maintained in the data store and work item history. You can view a record of it by viewing the history tab for a work item. 
 >
->Data defined for a custom field is deleted when you remove it from the form. To delete a custom field from a project collection, see [Delete a field](#delete-field).   
+>Data defined for a custom field is not deleted when you remove it from the form. To delete a custom field from a project collection, see [Delete a field](#delete-field).   
 
 <a id="show-hide-field">  </a>
 ### Hide an inherited field or custom control 
@@ -212,10 +215,11 @@ To review the list of fields defined for all processes and the WITs which refere
 
 Fields listed correspond to all those defined for the account. For descriptions and usage of each field, see [Work item field index](../../work-items/guidance/work-item-field.md).  
 
-<img src="_img/cpfields-list-fields-all-processes.png" alt="All Processes, Fields list" style="border: 2px solid #C3C3C3;" />
+> [!div class="mx-imgBorder"]  
+> ![Make a copy of a selected inherited process](_img/process/list-fields.png) 
 
 
-## Related notes  
+## Related articles  
 
 Once you've added a custom field, you can create [queries](../../track/using-queries.md) or [charts](../../../Report/charts.md) to track data related to it. <!---Note, however, that you can't access custom field data from [Power BI reports](https://www.visualstudio.com/en-us/get-started/report/connect-vso-pbi-vs). --> 
 
@@ -230,8 +234,8 @@ Additional topics of interest:
 - [Show bugs on backlogs and boards](../show-bugs-on-backlog.md)  
 
 If you are working with test plans or test cases, see these topics: 
-- [Create a test plan](../../../manual-test/getting-started/create-a-test-plan.md)  
-- [Create manual test cases](../../../manual-test/getting-started/create-test-cases.md)   
+- [Create a test plan](../../../test/create-a-test-plan.md)  
+- [Create manual test cases](../../../test/create-test-cases.md)   
 
 
 
@@ -245,8 +249,6 @@ If you've made changes to an inherited field, and now want to discard those chan
 <a id="delete-field">  </a>
 ### Delete a field     
 Deleting a field will delete all data associated with that field, including historical values. Once deleted, you can't recover the data. 
-
-Prior to deleting a field, you must first remove it from the form for each WIT that it's been added to.  
 
 1. You delete the field from a collection from the **Fields** page for all processes.  
 
@@ -271,4 +273,12 @@ Here, we relabel the Customer Ticket field to Ticket Number.
 
 [!INCLUDE [temp](../../_shared/field-reference.md)]  
 
-[!INCLUDE [temp](../../../_shared/help-support-shared.md)]
+<!--- 
+Commenting this out as it is in the process of changing 
+### Custom field names 
+
+The reference name for any new field you add is prefixed with the name of the inherited process for which it was created. For example, if you add Custom 1 field to MyAgile process, the reference name  will be `MyAgile.Custom1`. If you add Custom 2 field to MyAgile-Copy process, the reference name assigned to it is `MyAgile-Copy.Custom2`. 
+
+By adding all customizations to the same base inherited process, you simplify the naming conventions that get applied to a custom fields. This can be useful particularly when REST APIs are employed.  
+
+--> 

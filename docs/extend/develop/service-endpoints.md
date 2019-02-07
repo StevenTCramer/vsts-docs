@@ -1,11 +1,14 @@
 ---
-ms.prod: vs-devops-alm
-ms.technology: vs-devops-extensions-api
+ms.prod: devops
+ms.technology: devops-ecosystem
 title: Service Endpoints | Extensions for VSTS
 description: Browse through the places where your extension can extend Visual Studio Online.
 ms.assetid: ad0ea9de-620e-4605-8fcd-3c1443b26d8c
+ms.topic: conceptual
 ms.manager: douge
+monikerRange: '>= tfs-2017'
 ms.author: elbatk
+author: elbatk
 ms.date: 08/22/2016
 ---
 
@@ -22,15 +25,15 @@ Service endpoints are a way for VSTS to connect to external systems or services.
 Extensions are then able to leverage the service endpoint to acquire the stored details to perform the necessary operations on that service. 
 Follow this guide to create a new Service Point contribution and leverage it in your extension.
 
-## Tutorial Overview
+## Task overview
 
-This tutorial walks through developing a service endpoint by creating an example extension for VSTS that includes:
+This article walks through developing a service endpoint by creating an example extension for VSTS that includes:
 -	A custom service endpoint with data sources. This enables a build task or dashboard widget to call a REST endpoint on the service/server defined by the endpoint.
 -	A build task which defines 2 properties: The service endpoint & a picklist which has values populated from the REST endpoint data source.
 
 > Note: Service endpoints created by users will be created at the project level, not the account level. 
 
-The steps involved in completing this tutorial are:
+The steps involved in completing this task are:
 - [Step 1: Creating the extension manifest file](#step1)
 - [Step 2: The build task definition, in the task.json file](#step2)
 
@@ -42,7 +45,7 @@ The steps involved in completing this tutorial are:
 ## Step 1: Create the manifest file: `vss-extension.json`
 The [manifest file](./manifest.md) defines the custom endpoint and links to the task.json manifest for the build task. 
 
-In this tutorial, the manifest file creation is separated into three parts:
+In this article, the manifest file creation is separated into three parts:
 - [Create the basic manifest file](#createbasic)
 - [Add a custom endpoint contribution](#customendpoint)
 - [Add a build task](#buildtask)
@@ -144,6 +147,10 @@ Add the following `contributions` array underneath the `targets` array of the ba
   ],
 ```
 
+> [!NOTE]
+> Below is what your endpoint will look like after you've packaged and published your extension. See the [Next Steps](#next-steps) section below for info on how to package and publish.
+
+
 If you have successfully added the service contribution correctly, you will see the Fabrikam endpoint when trying to add a new Service Endpoint to your VSTS account.
 <img src="./_img/service-endpoint-endpoint-picker.png" style="padding:10px;display:block;margin-left:auto;margin-right:auto">
 
@@ -170,7 +177,7 @@ Inside the `contributions` array from the previous step, add the following objec
 Note that the datasource endpointUrl is usually computed from the url of the endpoint (or a fixed url), and some additional values. 
 For this tutorial this REST call will return nothing and is meant to be replaced by any REST calls you wish to make to your service.
 
-It’s possible to use other parameters than the endpoint url for the REST URL, for instance some endpoint properties. 
+It's possible to use other parameters than the endpoint url for the REST URL, for instance some endpoint properties. 
 For instance, assuming that we had a property in the endpoint named subscriptionId, the REST URL could use it with the following syntax: $(endpoint.subscription)
 
 <a name="step2" />
@@ -252,11 +259,11 @@ and Fabrikam is simply the name of the object.
 
 **The `project` input object**
 <br>
-This is the second field. It’s a picklist
+This is the second field. It's a picklist
 - This field is populated by a REST call. 
-- The values from the field “project” are taken from the “Projects” REST data source of the custom endpoint.
+- The values from the field "project" are taken from the "Projects" REST data source of the custom endpoint.
 - This is expressed in the `dataSourceBindings` array
-  -	The target is the name of the build task field to be populated (“project”)
+  -	The target is the name of the build task field to be populated ("project")
   -	The endpointId is the name of the build task field containing the custom endpoint type
   -	The REST call is chosen by the dataSourceName
 

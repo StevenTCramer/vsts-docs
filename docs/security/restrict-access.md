@@ -3,22 +3,22 @@ title: Grant or restrict access to select features
 titleSuffix: VSTS & TFS 
 description: How to set permissions to grant or restrict access to select build, version control, or work tracking functions  
 ms.assetid: ee4c4a8f-0478-4ade-8b12-4e5ffd0054c7
-ms.prod: vs-devops-alm
-ms.technology: vs-devops-admin
+ms.prod: devops
+ms.topic: Conceptual
+ms.technology: devops-security
 ms.manager: douge
 ms.author: kaelli
+author: KathrynEE
 ms.date: 02/12/2018
+monikerRange: '>= tfs-2013'
 ---
-
-
 # Grant or restrict access to select features and functions
 
-[!INCLUDE [temp](../_shared/version-vsts-tfs-all-versions.md)]
+[!INCLUDE [temp](../_shared/version-vsts-tfs-all-versions.md)]
 
+You can grant or restrict access to resources that you manage in Visual Studio Team Services (VSTS) or Team Foundation Server (TFS). Depending on your project needs, you may want to open up or close down access to a select set of features and for a select set of users. While the built-in security groups provide a standard set of permission assignments, you may need additional security requirements not met by these assignments.
 
-You can grant or restrict access to resources that you manage in Visual Studio Team Services (VSTS) or Team Foundation Server (TFS). Depending on your project needs, you may want to open up or close down access to a select set of features and for a select set of users. While the built-in security groups provide a standard set of permission assignments, you may need additional security requirements not met by these assignments.   
-
-If you are new to administrating permissions and groups, review [About permissions and groups](about-permissions.md) to learn about permission states and inheritance.  
+If you are new to administrating permissions and groups, review [About permissions and groups](about-permissions.md) to learn about permission states and inheritance.
 
 <!--- 
 This topic should provide useful steps to think about what they want to shut down, addressing the most common areas that admins have expressed that they want to shut down or open up. Also - consider how they might structure their project - repos, area paths, etc. and how that influences permissions 
@@ -31,8 +31,8 @@ Maybe consider this in a 2 or 3 step process:
 
 Use this topic to learn: 
 
-> [!div class="checklist"]  
-> * Recommended method for granting and restricting permissions       
+> [!div class="checklist"]
+> * Recommended method for granting and restricting permissions       
 > * How to delegate tasks by assigning select permissions to specific roles
 > * How to restrict access to view or modify objects 
 > * How to restrict modification of work items based on a user or group 
@@ -143,7 +143,7 @@ For an account or collection, Edit instance-level (or collection-level) informat
 <ul>
 <li>[Manage Git or TFVC repository permissions](set-git-tfvc-repository-permissions.md)</li>
 <li>[Manage Git branch permissions](set-git-tfvc-repository-permissions.md)</li>
-<li>[Administer build and release permissions](../build-release/set-permissions.md)</li>
+<li>[Administer build and release permissions](../pipelines/policies/set-permissions.md)</li>
 <li>[Manage Wiki permissions](../collaborate/manage-readme-wiki-permissions.md).</li>
 </td>
 </tr>
@@ -177,7 +177,7 @@ VSTS and TFS are designed to enable all valid users to be able to view all objec
 <td>View or update select build and release definitions</td>
 <td>Edit build definition, View build definition<br/>
 Edit release definition, View release definition<br/>
-You set these permissions at the object level. See [Set build and release permissions](../build-release/set-permissions.md).</td>
+You set these permissions at the object level. See [Set build and release permissions](../pipelines/policies/set-permissions.md).</td>
 </tr>
 
 <tr>
@@ -221,7 +221,7 @@ What you can do on TFS differs from what is available  from VSTS
 > [!div class="nextstepaction"]
 > [Remove user accounts](remove-users-prohibit-access.md)
 
-## Related notes
+## Related articles
 
 - [Default permissions and access](permissions-access.md) 
 - [Permission lookup guide](permissions-lookup-guide.md) 

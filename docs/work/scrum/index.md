@@ -1,31 +1,29 @@
 ---
-title: Scrum index of topics for VSTS & TFS
-description: Index to topics for working in Scrum using VSTS or Team Foundation Server (TFS)  
-ms.technology: vs-devops-wit
-ms.prod: vs-devops-alm
+title: Index of Scrum topics
+titleSuffix: VSTS & TFS 
+description: Index to topics for working in Scrum in Visual Studio Team Services & Team Foundation Server 
+ms.technology: devops-agile
+ms.prod: devops
 ms.assetid:  
 ms.manager: douge
 ms.author: kaelli
-ms.date: 07/14/2017
+author: KathrynEE
+ms.topic: conceptual
+ms.date: 03/20/2018
 ---
 
 # Scrum
 
-[!INCLUDE [temp](../_shared/version-vsts-tfs-all-versions.md)]
+[!INCLUDE [temp](../_shared/version-vsts-tfs-all-versions.md)]
 
 With Scrum, you can schedule and plan sprints, update your task board, and monitor your sprint burndown. 
-
-<!---
-## Overview  
-[About Scrum](scrum-overview.md) 
-[About teams and Agile tools](../../teams/about-teams-and-settings.md?toc=/vsts/work/scrum/toc.json&bc=/vsts/work/scrum/breadcrumb/toc.json)  
--->
 
 ## 5-Minute Quickstarts  
 
 Start tracking work by adding work items, creating your backlog, or scheduling sprints.  
   
-- [Schedule sprints](define-sprints.md)   
+- [Schedule sprints](define-sprints.md)
+- [Define iteration paths](../customize/set-iteration-paths-sprints.md?toc=/vsts/work/scrum/toc.json&bc=/vsts/work/scrum/breadcrumb/toc.json)    
 
 ## Step-by-Step Tutorials
 
@@ -64,6 +62,6 @@ Whether you use scrum, Kanban, or a combination of Agile methods, you can get st
 - [Kanban](../kanban/index.md)
 - [Work item queries](../track/index.md)
 - [Work item customization](../customize/index.md)
-- [What is Scrum?](https://www.visualstudio.com/learn/what-is-scrum/)  
-- [What is Agile development?](https://www.visualstudio.com/learn/what-is-agile-development/)  
+- [What is Scrum?](/azure/devops/agile/what-is-scrum)
+- [What is Agile development?](/azure/devops/agile/what-is-agile-development)  
 

@@ -1,11 +1,14 @@
 ---
 title: Develop extensions content index for VSTS and TFS  
 description: Index of developing extensions for VSTS and Team Foundation Server
-ms.prod: vs-devops-alm
-ms.technology: vs-devops-extensions-api
+ms.prod: devops
+ms.technology: devops-ecosystem
 ms.assetid: 153aa519-6233-4292-8eac-44de15f2d3dd
+ms.topic: conceptual
 ms.manager: douge
+monikerRange: '>= tfs-2017'
 ms.author: elbatk
+author: elbatk
 ms.date: 08/23/2016
 ---
 
@@ -19,6 +22,12 @@ Extensions are simple add-ons that can be used to customize and extend your DevO
 Check out the quick starts to get you started:
 * [Write your first extension](get-started/node.md)
 
+## Videos
+
+Develop Visual Studio Team Services extension with continuous delivery pipeline:
+
+<a href="https://www.youtube.com/watch?v=uzQFvYY0xiM&list=PLe14MLC-Nwy6saThL6NSv2rTtFNpkvfp3" target="_blank"><img src="_img/develop-extension-video.png" alt="Develop Extensions" width="200" /></a>
+
 ## Concepts
 * [Extension points](reference/targets/overview.md)
 * [Contribution model](develop/contributions-overview.md)
@@ -29,6 +38,7 @@ Check out the quick starts to get you started:
 ## How-to Guides
 * Develop
     * [Add a build task](develop/add-build-task.md)
+    * [Extend the work item form for work item tracking](develop/add-workitem-extension.md)
     * [Add a dashboard widget](develop/add-dashboard-widget.md)
     * [Call a REST API](develop/call-rest-api.md)
 * Package and publish

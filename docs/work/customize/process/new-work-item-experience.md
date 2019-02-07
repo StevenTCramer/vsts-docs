@@ -2,12 +2,14 @@
 title: New work item web form 
 titleSuffix: VSTS & TFS 
 description: The new web form and work item tracking experience supports more integrated and collaborative experiences
-ms.technology: vs-devops-wit
-ms.prod: vs-devops-alm
+ms.technology: devops-agile
+ms.prod: devops
 ms.assetid: B4CE99F5-BF4C-4B93-89DC-20C5BD9FB54E  
 ms.manager: douge
 ms.author: kaelli
-ms.date: 12/19/2017
+author: KathrynEE
+monikerRange: 'vsts || >= tfs-2017 <= tfs-2018'
+ms.date: 03/20/2018
 ---
 
 # New work item tracking experience
@@ -17,7 +19,7 @@ ms.date: 12/19/2017
 > [!IMPORTANT]  
 > **Feature availability:**&#160;&#160;The new form and its corresponding features are available from the web portal for VSTS and TFS 2017 and later versions.<br/> 
 > - For TFS 2017 users, the new form is automatically available when you add team projects to a new collection. For existing team projects, an admin is required to [enable the new form](../manage-new-form-rollout.md).<br/>
-> - For TFS 2015 users, the new form isn't available. You must [upgrade to TFS 2017](https://www.visualstudio.com/downloads/#team-foundation-server-2017) to access the new form.  
+> - For TFS 2015 users, the new form isn't available. You must [upgrade to TFS 2017](https://www.visualstudio.com/downloads/#team-foundation-server-2017) to access the new form.  
 
 Work items have received a facelift. To provide a fresher, more modern experience to tracking work, we've replaced our "old and clunky" form. Along with the noticeable responsive form layout, with the nre form you now have access to these features:
 
@@ -70,7 +72,7 @@ Within the discussion section, you can use the [**@mention** control](../../../n
 <img src="../../backlogs/_img/add-work-items-discussion.png" alt="Discussion section" style="border: 1px solid #C3C3C3;" />  
 
 > [!IMPORTANT]
-> For on-premises TFS, [you must configure an SMTP sever](../../../tfs-server/admin/setup-customize-alerts.md) in order for team members to receive notifications.     
+> For on-premises TFS, [you must configure an SMTP sever](/tfs/server/admin/setup-customize-alerts) in order for team members to receive notifications.     
 
 ### Access to other tasks
 
@@ -100,7 +102,7 @@ If you don't see this option, then the new form has been enabled for all users, 
 
 When you switch back, all forms revert to the layout they had previously. If you do choose to switch back, we'd appreciate hearing what didn't work for you with the new form layout.   
 
-## Related notes 
+## Related articles 
 
 The new form also supports customization through the user interface with the Inheritance process model. To learn more about process models and what's supported with each, see [Customize your work tracking experience](../customize-work.md). 
 

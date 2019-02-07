@@ -1,11 +1,15 @@
 ---
-title: Before you upgrade from TFS 2008 or TFS 2010 | TFS 
+title: Upgrade information about TFS 2008 or TFS 2010
+titleSuffix: TFS
 description: Follow these steps to when you upgrade from TFS 2008 or TFS 2010 to TFS 2015 so that you can configure the new features.
-ms.technology: vs-devops-wit
-ms.prod: vs-devops-alm
+ms.technology: devops-agile
+ms.prod: devops
 ms.assetid: F52E3DB7-4A62-4BD2-8C6F-CC44CC09464D
 ms.manager: douge
 ms.author: kaelli
+author: KathrynEE
+ms.topic: conceptual
+monikerRange: '>= tfs-2013 <= tfs-2015'
 ms.date: 08/04/2016
 ---
 
@@ -13,8 +17,8 @@ ms.date: 08/04/2016
 
 <b>TFS 2015</b> 
 
-<blockquote style="font-size: 13px"><b>Feature availability: </b>This topic applies only to team projects hosted on an on-premises Team Foundation Server (TFS). Team projects on VSTS [update automatically with each service upgrade](/vsts/release-notes/index).
-</blockquote>  
+> [!NOTE]   
+> **Feature availability:** This topic applies only to team projects hosted on an on-premises Team Foundation Server (TFS). Team projects on VSTS [update automatically with each service upgrade](/vsts/release-notes/index).
 
 Each version of Team Foundation Server (TFS) typically introduces one or more changes to work tracking. To gain access to the new features that rely on these changes, your existing team projects must be updated. 
 
@@ -29,7 +33,7 @@ This option is simpler, but will result in more downtime, especially if your TFS
 * [Run the Configure Features Wizard for TFS 2012 on each team project](configure-features-after-upgrade.md).
 	You need to do this before you upgrade to TFS 2015 so that you'll be able to use the Confugure Features Wizard for TFS 2015.
 * [Update a team project based on a MSF v4.2 process template](reference/update-a-team-project-v4-dot-2-process-template.md).
-* [Upgrade your TFS instance to TFS 2015](../../tfs-server/upgrade/get-started.md).
+* [Upgrade your TFS instance to TFS 2015](/tfs/server/upgrade/get-started).
 * [Run the Configure Features Wizard for TFS 2015 on each team project](configure-features-after-upgrade.md).
 	Each team project owner can do this when it makes sense. You don't have to configure features for all team projects at this time.
 * [Perform additional configurations for each team project.](additional-configuration-options.md).
@@ -40,7 +44,7 @@ This option is simpler, but will result in more downtime, especially if your TFS
 
 This option is more work, but it will work with customized team projects and it reduces dowbtime because you don't have to upgrade twice.
 
-* [Upgrade your TFS instance to TFS 2015](../../tfs-server/upgrade/get-started.md).
+* [Upgrade your TFS instance to TFS 2015](/tfs/server/upgrade/get-started).
 * Manually update each team project:
 	* [Update a team project based on a MSF v4.2 process template](reference/update-a-team-project-v4-dot-2-process-template.md).
 	* [Update the Workflow for Agile Team Projects](https://msdn.microsoft.com/library/hh500412.aspx).
@@ -49,18 +53,19 @@ This option is more work, but it will work with customized team projects and it 
 
 <a id="earlier-versions">  </a> 
 
-##Updating team projects based on earlier versions of MSF process templates 
+## Updating team projects based on earlier versions of MSF process templates 
 If you upgrade your TFS instance to TFS 2015 and your existing team projects were created with MSF version 5.0 or earlier process templates, you may have to apply a few updates manually. Two specific problems can occur having to do with a missing field or workflow state.  
 
-###Value Area field missing   
+### Value Area field missing   
 The following message reported by the Configure Features wizard indicates that the Value Area field is missing from either the User Story or Requirement WIT definition:  
 
 ```
 [Error] TF400654: Unable to configure Planning Tools. The following element contains an error: RequirementBacklog/Columns. TF400529: This element defines the columns that appear on the backlog. You must set all values to fields that exist in at least one of the work item types belonging to the category. The following fields do not exist in any of the work item types: Microsoft.VSTS.Common.ValueArea.
 ```
 
-You can resolve this error by (1) adding the following syntax to the ```FIELDS``` section of the User Story or Requirement definition:
-```
+You can resolve this error by (1) adding the following syntax to the ```FIELDS``` section of the User Story or Requirement definition:  
+> [!div class="tabbedCodeSnippets"]
+```XML
 <FIELD name="Value Area" refname="Microsoft.VSTS.Common.ValueArea" type="String">
    <REQUIRED />
    <ALLOWEDVALUES>
@@ -73,19 +78,23 @@ You can resolve this error by (1) adding the following syntax to the ```FIELDS``
 ```
 
 and the following syntax to the ```FORM``` section:
-```
+
+> [!div class="tabbedCodeSnippets"]
+```XML
 <Control FieldName="Microsoft.VSTS.Common.ValueArea" Type="FieldControl" Label="Value area" LabelPosition="Left" />
 ```
 
 Or (2) removing the following entry from the ProcessConfiguration ```RequirementBacklog``` section: 
-```
+
+> [!div class="tabbedCodeSnippets"]
+```XML
 <Column refname="Microsoft.VSTS.Common.ValueArea" width="100" />
 ```
 
 See [Add features using a manual update process](add-features-manually.md) for more information about updating these files manually. 
 
 
-###New workflow state missing 
+### New workflow state missing 
 The following message reported by the Configure Features wizard indicates that the New workflow state is missing for the Bug WIT definition:  
 
 **[Error] TF400654: Unable to configure Planning Tools.** The following element contains an error: BugWorkItems/BugWorkItems. TF400506: This element defines the states for work items that represent Bugs or Defects. Each state must exist in at least one of the work item types that are defined in: BugWorkItems. The following states do not exist in any of the work item types: New.

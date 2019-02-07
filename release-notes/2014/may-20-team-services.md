@@ -1,8 +1,8 @@
 ---
 title: Visual Studio Online Updates - May 20
 description: VSTS release notes for May 20 2014
-ms.prod: vs-devops-alm
-ms.technology: vs-devops-articles
+ms.prod: devops
+ms.technology: vsts-release-notes
 ms.manager: douge
 ms.assetid: 764a35d1-3785-45ef-b339-8c2714b4f836
 ms.date: 06/01/2016
@@ -44,7 +44,7 @@ One benefit of an MSDN subscription is access to Visual Studio Online accounts. 
 
 [Associating your Visual Studio Online benefit with a work account](https://msdn.microsoft.com/subscriptions/dn531048.aspx)
 
-[Which MSDN Subscriptions include the Visual Studio Online benefit](https://www.visualstudio.com/en-us/get-started/assign-licenses-to-users-vs#EligibleMSDNSubscriptions)
+[Which MSDN Subscriptions include the Visual Studio Online benefit](https://azure.microsoft.com/pricing/details/visual-studio-team-services/)
 
 ##Copy/Paste Shared Parameter Data between VS Online and Excel
 

@@ -1,18 +1,22 @@
 ---
-title: Connect Power BI  | VSTS
+title: Connect Power BI 
+titleSuffix: VSTS
 description: Get started using Power BI to analyze data collected for team projects hosted on Visual Studio Team Services (VSTS) 
-ms.technology: vs-devops-reporting
-ms.prod: vs-devops-alm
+ms.technology: devops-analytics
+ms.prod: devops
 ms.assetid: 2915605A-E3F1-4FE0-ACA5-7A4D734DB679
 ms.reviewer: stansw
 ms.manager: douge
 ms.author: kaelli
+author: KathrynEE
+ms.topic: archived
+robots: NOINDEX, NOFOLLOW
 ms.date: 11/13/2017
 ---
 
 # Connect to VSTS with Power BI Content Pack
 
-**VSTS**
+[!INCLUDE [temp](../../_shared/version-vsts-only.md)]
 
 You can gain insight and analyze the progress and quality of your project by connecting Power BI to the data collected and stored for VSTS. 
 
@@ -64,7 +68,7 @@ Your first step requires you to authorize Power BI to access your VSTS account. 
 	>
 	> ![Third-party oAuth enabled](_img/Screen5.png)  <br/><br/>
 
-	> Contact your account administrator to determine if it needs to be enabled. Â 
+	> Contact your account administrator to determine if it needs to be enabled.  
 
 8. Successful authorization displays the following authorization dialog which allows Power BI to retrieve data from your account. Scroll down to the bottom and click **Accept**.
 
@@ -82,17 +86,16 @@ If your cached credentials work, you won't get prompted. If you don't have cache
 
 ![VSTS Login page](_img/Screen7.png)
 
->[!IMPORTANT]  
->There is a situation that can occur where Power BI will still try to use your cached credentials even though they are different than the credentials you used when logging onto Power BI. In this case, the VSTS Authorize dialog will still be displayed however, you'll be logged on as the wrong user. To correct this situation, do the following: <br/>  
+> [!IMPORTANT]  
+> There is a situation that can occur where Power BI will still try to use your cached credentials even though they are different than the credentials you used when logging onto Power BI. In this case, the VSTS Authorize dialog will still be displayed however, you'll be logged on as the wrong user. To correct this situation, do the following:     
 > - Click **Sign out** in the Authorize application page  
 > - Close the page and click **Sign In** again on the Power BI Configure VSTS dialog  
 > - You will then be prompted to enter your VSTS credentials and everything will work as normal.  
 
 
-## Related notes
+## Related articles
 
-To get started using Power BI and the Analytics service, make sure you have [permissions required to access the Analytics service](../analytics/analytics-security.md) and then review the [knowledge base of articles](https://support.powerbi.com/).
+To get started using Power BI and the Analytics service, make sure you have [permissions required to access the Analytics service](../analytics/analytics-security.md) and then review the [knowledge base of articles](https://docs.microsoft.com/en-us/power-bi/).
 
-To understand the default reports available, see [Create reports with data from using Power BI for VSTS](report-on-vso-with-power-bi-vs.md).
 
 

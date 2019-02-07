@@ -1,11 +1,14 @@
 ---
-ms.prod: vs-devops-alm
-ms.technology: vs-devops-integrate
+ms.prod: devops
+ms.technology: devops-ecosystem
+ms.topic: conceptual
 title: Basic Authentication for Team Foundation Server
 description: Use the TFS Cross Platform (tfx) command line interface against TFS using basic authentication.
 ms.assetid: 6dc7f977-4b62-4bd6-b77a-1c6cade1ffa8
 ms.manager: douge
+monikerRange: '>= tfs-2013'
 ms.author: elbatk
+author: elbatk
 ms.date: 03/10/2017
 ---
 
@@ -30,7 +33,7 @@ npm i -g tfx-cli
 ## Configure TFS to use Basic Authentication
 
 > [!WARNING]
-> Basic authentication sends usernames and passwords in plaintext. You should consider [configuring TFS to use SSL](../../../tfs-server/admin/setup-secure-sockets-layer.md) in order to enable secure communication when using basic auth.
+> Basic authentication sends usernames and passwords in plaintext. You should consider [configuring TFS to use SSL](/tfs/server/admin/setup-secure-sockets-layer) in order to enable secure communication when using basic auth.
 
 
 

@@ -1,17 +1,21 @@
 ---
 title: Create and manage your VSTS account 
-description: Develop apps and collaborate with other code developers using the VSTS integrated cloud service 
-ms.prod: vs-devops-alm
-ms.technology: vs-devops-setup
+description: Collaborate with others to develop apps using our cloud service, plan and track work, integrate with other services, and get more features or extensions
+ms.prod: devops
+ms.technology: devops-accounts
 ms.assetid: fa1dbe39-08b1-4eba-886a-33c1aa1e6a83
-ms.topic: get-started-article
+ms.topic: overview
 ms.manager: douge
 ms.author: chcomley
-ms.date: 10/6/2017
+author: chcomley
+ms.date: 10/06/2017
+monikerRange: '>= tfs-2013'
 ---
+
+
 # About account management
 
-**VSTS**
+**VSTS|TFS 2018|TFS 2017|TFS 2015|TFS 2013**
 
 With a Visual Studio Team Services (VSTS) account, you gain access to the platform in which you can:
 

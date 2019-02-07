@@ -1,16 +1,21 @@
 ---
-title: Dashboards and reports using Power BI | VSTS
+title: Dashboards and reports using Power BI 
+titleSuffix: VSTS
 description: Learn about default reports and how to refresh datasets, create reports and dashboards from Visual Studio Team Services (VSTS) data using Power BI  
-ms.technology: vs-devops-reporting
-ms.prod: vs-devops-alm
+ms.technology: devops-analytics
+ms.prod: devops
 ms.assetid: BBCB1E19-F2D2-4C52-BE8C-7CEF8A7FDB0B  
 ms.manager: douge
 ms.author: kaelli
+author: KathrynEE
+ms.topic: archived
+robots: NOINDEX, NOFOLLOW
 ms.date: 08/04/2017
 ---
 
 
-# Create Power BI dashboards and reports 
+# Create Power BI dashboards and reports
+
 **VSTS**
 [!INCLUDE [temp](../_shared/content-pack-deprecation.md)]
 
@@ -19,6 +24,7 @@ You can create dashboards, individual reports, or explore data collected for you
 Prior to working with VSTS data, review [Power BI - Guided Learning](https://powerbi.microsoft.com/en-us/guided-learning/).
 
 ## Get started
+
 After getting connected to VSTS you will see an initial dashboard. On the left side of the screen you will notice Dashboards, Reports and Datasets.
 
 ![Dashboards, Reports and Datasets](_img/vs-team-services-power-bi-opened.png)
@@ -35,12 +41,15 @@ Currently, a report can be based on a single dataset. You can create as many rep
 
 
 ## Work with datasets
+
 Refer to [Get started with Power BI](https://powerbi.microsoft.com/documentation/powerbi-service-get-started) for information on working with datasets. 
 
-##Work with reports
+## Work with reports
+
 Reports are at the heart of Power BI and provide the basis for dashboards. Dashboards are the shareable component of Power BI. See the Power BI documentation on [Reports](https://powerbi.microsoft.com/en-us/documentation/powerbi-service-reports/) for more information.
 
-###Understand the default report
+### Understand the default report
+
 The VSTS content pack generates a single report with several pages. 
 
 <table width="100%">

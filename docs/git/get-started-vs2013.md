@@ -3,12 +3,16 @@ title: Get started with Git and Visual Studio 2013 | VSTS & TFS
 description: Get started using Git in Visual Studio
 toc: show
 ms.assetid: BFDE8FAF-63B8-4BC9-9A24-32EE2CA73C13
-ms.prod: vs-devops-alm
-ms.technology: vs-devops-git 
+ms.prod: devops
+ms.technology: devops-code-git 
 ms.manager: douge
 ms.author: sdanie
-ms.date: 08/28/2017
+author: steved0x
+ms.topic: conceptual
+ms.date: 03/14/2018
+monikerRange: '>= tfs-2013'
 ---
+
 
 #  Get started using Git in Visual Studio
 
@@ -170,7 +174,7 @@ Now you can add reviewers to get their feedback on your changes before you merge
 	
 
 #### Q: How do I create a team project on an on-premises Team Foundation Server?
-* [Set up TFS on a server](../tfs-server/install/get-started.md).
+* [Set up TFS on a server](/tfs/server/install/get-started).
 * [Create a team project](../accounts/create-team-project.md).  Be sure to select **Git** from the version control options:
 
 	![Select Git from the Version Control menu](_img/get-started/CreateProjGitPCW.png)

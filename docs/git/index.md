@@ -1,14 +1,18 @@
 ---
 title: Git index to content for VSTS & TFS    
 description: Guide to getting started with Git documentation  
-ms.prod: vs-devops-alm
-ms.technology: vs-devops-git 
+ms.prod: devops
+ms.technology: devops-code-git 
 ms.assetid: 36A4986E-BFB8-422B-BFC9-8A0CB75D0603    
 ms.manager: douge
 ms.author: sdanie
-ms.date: 01/19/2018
+author: steved0x
+ms.topic: overview
 layout: LandingPage
+ms.date: 04/19/2018
+monikerRange: '>= tfs-2013'
 ---
+
 
 # Git Repositories
 
@@ -56,7 +60,7 @@ Learn the basics of working in Git with these tutorials which show tasks perform
 - [Forks](forks-overview.md)
 - [Branch policies](branch-policies-overview.md)
 - [Customize and extend pull request workflows with pull request status](concepts/pull-request-status.md)
-- [How we use Git at Microsoft](https://www.visualstudio.com/learn/use-git-microsoft/)
+- [How we use Git at Microsoft](/azure/devops/devops-at-microsoft/use-git-microsoft)
 
 ## Reference
 
@@ -66,9 +70,9 @@ Learn the basics of working in Git with these tutorials which show tasks perform
 
 ## Resources 
 
-- [What is Git?](https://www.visualstudio.com/learn/what-is-git/)  
-- [What is version control?](https://www.visualstudio.com/learn/what-is-version-control/)  
-- [Plan your migration to Git](https://www.visualstudio.com/learn/centralized-to-git/)  
-- [Migrate from TFVC to Git](https://www.visualstudio.com/learn/migrate-from-tfvc-to-git/)  
-- [Git at Scale](https://www.visualstudio.com/learn/git-at-scale/)   
+- [What is Git?](/azure/devops/git/what-is-git)  
+- [What is version control?](/azure/devops/git/what-is-version-control)  
+- [Plan your migration to Git](/azure/devops/git/centralized-to-git)  
+- [Migrate from TFVC to Git](/azure/devops/git/migrate-from-tfvc-to-git)  
+- [Git at Scale](/azure/devops/git/git-at-scale)   
 - [Marketplace extensions](https://marketplace.visualstudio.com/search?target=VSTS&category=Code&sortBy=Downloads)

@@ -2,10 +2,13 @@
 title: AppVeyor with VSTS
 description: Use AppVeyor with your VSTS account
 ms.assetid: 49541e06-2f8c-40ca-a161-f6ddff6ec83a
-ms.prod: vs-devops-alm
-ms.technology: vs-devops-extensions-api
+ms.prod: devops
+ms.technology: devops-collab
+ms.topic: conceptual
 ms.manager: douge
+monikerRange: '>= tfs-2017'
 ms.author: elbatk
+author: elbatk
 ms.date: 08/04/2016
 ---
 
@@ -41,7 +44,7 @@ for pricing related to their services.
 
 ####Q: Do I need to sign into AppVeyor using my VSTS ID in order to setup this integration?
 
-A: No. If you use an account that's not already assocaited with your Visual Studio ID,
+A: No. If you use an account that's not already associated with your Visual Studio ID,
 you'll authorize access to your VSTS account when you add Git repositories from VSTS. 
 
 ####Q: Does AppVeyor change anything in my VSTS account?

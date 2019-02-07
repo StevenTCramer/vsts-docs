@@ -1,11 +1,14 @@
 ---
-ms.prod: vs-devops-alm
-ms.technology: vs-devops-extensions-api
+ms.prod: devops
+ms.technology: devops-collab
+ms.topic: conceptual
 title: Authorize Other Services | VSTS
 description: Authorize other services to work with VSTS
 ms.assetid: 314a28cd-b2ae-41a0-8dfb-330222c1aed0
 ms.manager: douge
+monikerRange: '>= tfs-2017'
 ms.author: elbatk
+author: elbatk
 ms.date: 08/04/2016
 ---
 
@@ -53,7 +56,7 @@ To ensure an authorization request is legitimate:
 
 - Look for the VSTS branding across the top of the authorization approval page.
 
-- Ensure the authorization approval page URL begins with ```https://app.vssps.visualstudio.com```.
+- Ensure the authorization approval page URL begins with ```https://app.vssps.visualstudio.com/```.
 
 - Pay attention to any HTTPS-related security warnings in your browser.
 

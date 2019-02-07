@@ -1,22 +1,25 @@
 ---
 title: Use Subversion with VSTS
 description: Learn how to use Subversion with VSTS for Java development
-ms.prod: vs-devops-alm
-ms.technology: vs-devops-build 
+ms.prod: devops
+ms.technology: devops-cicd
+ms.topic: conceptual 
+ms.custom: java
 ms.manager: douge
 ms.author: douge
+author: erickson-doug
 ms.date: 01/22/2018
+monikerRange: '>= tfs-2017'
 ---
 
-# Use Subversion with Visual Studio Team Services (VSTS) or Team Foundation Server (TFS) for Java development
 
-#### VSTS | TFS 2018 | TFS 2017 | TFS 2015
+# Use Subversion with Visual Studio Team Services (VSTS) or Team Foundation Server (TFS) for Java development
 
 Use Subversion for source control with VSTS or TFS for your Java project.
 
 ## Prerequisites
 
- - You have a VSTS Team Foundation  team project available. If you don't, check out our [Azure DevOps Project for Java topic](/vsts/build-release/apps/cd/azure/azure-devops-project-java). (Note: This will also create a VSTS Git repo, which you do not need to use. We will use the VSTS or TFS Team)
+ - You have a VSTS Team Foundation  team project available. If you don't, check out our [Azure DevOps Project for Java topic](/vsts/pipelines/apps/cd/azure/azure-devops-project-java). (Note: This will also create a VSTS Git repo, which you do not need to use. We will use the VSTS or TFS Team)
  - If you would rather use your own Subversion repository, you'll need the connection details for it and should be prepared to commit a change.
 
 In this guide, you will build a Java project (create a WAR file) using Maven. We will lead you through the steps to: 
@@ -116,7 +119,7 @@ Congratulations! You've successfully created a build definition that polls for c
 
 **Q: What does the value of "Default branch or tag" represent?**
 
-**A:** You can change this value to build a default branch (or tag) in your Subversion repository with this build definition. For instance, if you want to create a Release build definition to build a “branches/releases/v14.0” branch, you would set the value of “Default branch or tag” to “branches/releases/v14.0”.
+**A:** You can change this value to build a default branch (or tag) in your Subversion repository with this build definition. For instance, if you want to create a Release build definition to build a "branches/releases/v14.0" branch, you would set the value of "Default branch or tag" to "branches/releases/v14.0".
 
 **Q: What does "Batch changes" do? And what if I uncheck it?**
 

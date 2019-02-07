@@ -2,13 +2,15 @@
 title: Manage personal notification settings
 titleSuffix: VSTS & TFS
 description: Get notified when changes occur to source code, git, work items, and builds when using Visual Studio Team Services (VSTS) and Team Foundation Server (TFS)
-ms.technology: collaborate
-ms.prod: vs-devops-alm
+ms.technology: devops-collab
+ms.prod: devops
 ms.assetid: 644687b3-e30e-46b0-8d3e-3d4a4e34d13a
 ms.manager: douge
-ms.author: wismythe
-ms.topic: get-started-article
+ms.author: elbatk
+author: elbatk
+ms.topic: conceptual
 ms.date: 09/01/2017
+monikerRange: '>= tfs-2017'
 ---
 
 
@@ -17,16 +19,16 @@ ms.date: 09/01/2017
 <b>VSTS | TFS 2018 | TFS 2017.1 | [Previous versions](../work/track/alerts-and-notifications.md)</b> 
 
 >[!NOTE]  
->**Feature availability**: This topic applies to VSTS and to TFS 2017.1 and later versions. If you work from an on-premises TFS 2017 or ealier versions, see [Set alerts, get notified when changes occur](../work/track/alerts-and-notifications.md). For on-premises TFS, [you must configure an SMTP sever](../tfs-server/admin/setup-customize-alerts.md) in order for team members to see the Notifications option from their account menu and to  receive notifications. 
+>**Feature availability**: This topic applies to VSTS and to TFS 2017.1 and later versions. If you work from an on-premises TFS 2017 or ealier versions, see [Set alerts, get notified when changes occur](../work/track/alerts-and-notifications.md). For on-premises TFS, [you must configure an SMTP sever](/tfs/server/admin/setup-customize-alerts) in order for team members to see the Notifications option from their account menu and to  receive notifications. 
  
 As changes occur to your code base, builds, work items, and other operations, you can receive email notifications. For example, you can set an alert to be notified whenever a bug that you opened is resolved or a work item is assigned to you. 
 
 Use this topic to learn how to:
 
-> [!div class="checklist"]   
-> * View your notifications    
-> * Add a custom subscription      
-> * Unsubscribe or opt out of a team or project subscription   
+> [!div class="checklist"]   
+> * View your notifications    
+> * Add a custom subscription      
+> * Unsubscribe or opt out of a team or project subscription   
 
 
 ## View your personal notifications 

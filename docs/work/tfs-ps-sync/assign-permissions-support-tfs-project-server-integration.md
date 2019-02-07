@@ -1,11 +1,14 @@
 ---
-title: Assign permissions to support TFS-Project Server integration | TFS
-description: Assign permissions to support configuration and working with TFS- Project Server data synchronization
-ms.prod: visual-studio-tfs-dev14
-ms.technology: vs-devops-wit 
+title: Assign permissions to support TFS-Project Server integration
+titleSuffix: TFS 
+description: Assign permissions to support configuration and working with Team Foundation Server & Project Server  data synchronization
+ms.prod: devops
+ms.technology: devops-agile 
 ms.assetid: d71eb502-00d0-4904-ac79-23195a707dc9
 ms.manager: douge
 ms.author: kaelli
+author: KathrynEE
+ms.topic: conceptual
 ms.date: 03/16/2017
 ---
 
@@ -67,8 +70,8 @@ ms.date: 03/16/2017
  Identify the following service accounts:  
   
 -   **Service account for TFS**  
-  
-     [Open the Team Foundation Administration console](../../tfs-server/command-line/open-admin-console.md). If a Network Service account is used, [change it to a domain account](../../tfs-server/admin/change-service-account-password.md).  
+
+     [Open the Team Foundation Administration console](/tfs/server/command-line/open-admin-console). If a Network Service account is used, [change it to a domain account](/tfs/server/admin/change-service-account-password).  
   
 -   **Service account for the Project Server Event Handler**  
   
@@ -334,8 +337,8 @@ ms.date: 03/16/2017
   
 ##  <a name="add_tfadmingroup"></a> 5. Add user accounts to Team Foundation Administrators group  
  **Required for:** ![Project Server 2010 Classic Mode](_img/alm_tfs-ps_classicmode.png "ALM_TFS-PS_ClassicMode"), ![Project Server 2013 Permission Mode](_img/alm_tfs-ps_permmode.png "ALM_TFS-PS_PermMode"), and ![Project Server 2013 SharePoint Mode](_img/alm_tfs-ps_spmode.png "ALM_TFS-PS_SPMode")  
-  
-1.  On the application-tier server, [Open the Team Foundation Administration Console](../../tfs-server/command-line/open-admin-console.md), and open **Group Membership**.  
+
+1.  On the application-tier server, [Open the Team Foundation Administration Console](/tfs/server/command-line/open-admin-console), and open **Group Membership**.  
   
      ![Application tier, choose Group Membership](_img/alm_tac_groupmembership.png "ALM_TAC_GroupMembership")  
   
@@ -449,7 +452,7 @@ rs of Project Professional|[Project Manager group for each PWA instance](#pwa)|!
 |-------------------------|-----------------------------------|  
 |-   [Manage users in Project Server 2010](http://go.microsoft.com/fwlink/?LinkId=207275)<br />-   [Plan for administrative and service accounts (Project Server 2010)](http://go.microsoft.com/fwlink/?LinkId=207273)<br />-   [Plan groups, categories, and RBS in Project Server 2010](http://technet.microsoft.com/library/cc197354.aspx)<br />-   [Manage security groups in Project Server 2010](http://go.microsoft.com/fwlink/?LinkId=207274)<br />-   [Project Server 2010 global permissions](http://go.microsoft.com/fwlink/?LinkId=207276)<br />-   [Project Server 2010 default group permissions](http://go.microsoft.com/fwlink/?LinkId=207277)<br />-   [Add resources to the enterprise resource pool](http://go.microsoft.com/fwlink/?LinkId=203356)<br />-   [Active Directory Resource Pool Synchronization (Project Server 2010 settings)](http://technet.microsoft.com/library/gg982985.aspx)|-   [Plan user access in Project Server 2013](http://go.microsoft.com/fwlink/?LinkId=262117)<br />-   [Plan for administrative and service accounts (Project Server 2013)](http://go.microsoft.com/fwlink/?LinkId=262110)<br />-   [Plan groups, categories, and RBS in Project Server 2013](http://go.microsoft.com/fwlink/?LinkId=262111)<br />-   [Manage security groups in Project Server 2013](http://go.microsoft.com/fwlink/?LinkId=262112)<br />-   [Manage security group synchronization with Active Directory in Project Server 2013](http://go.microsoft.com/fwlink/?LinkId=262113)<br />-   [Manage users in Project Server 2013](http://go.microsoft.com/fwlink/?LinkId=262114)<br />-   [Manage Active Directory Resource Pool synchronization in Project Server 2013](http://go.microsoft.com/fwlink/?LinkId=262115)<br />-   [Default group permissions in Project Server 2013](http://go.microsoft.com/fwlink/?LinkId=262116)|  
   
-## Related notes  
+## Related articles  
  [Configuration quick reference](configuration-quick-reference.md)   
  [Configure TFS-Project Server integration](configure-tfs-project-server-integration.md)   
  [Synchronization process overview](synchronization-process-overview.md)   

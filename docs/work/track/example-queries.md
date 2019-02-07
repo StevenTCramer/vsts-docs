@@ -1,19 +1,21 @@
 ---
-title: Create managed queries 
-description: Track work by creating queries to list items using Visual Studio Team Services (VSTS) and Team Foundation Server (TFS)
-ms.prod: vs-devops-alm
-ms.technology: vs-devops-wit
+title: Create managed queries to generate a list of work items
+titleSuffix: VSTS & TFS 
+description: Track work by creating queries to list work items in Visual Studio Team Services & Team Foundation Server 
+ms.prod: devops
+ms.technology: devops-agile
 ms.assetid: 285a014e-89bf-4e5f-bebf-11094e93d796  
-ms.topic: get-started-article
+ms.topic: overview
 ms.manager: douge
-ms.author: kaelli
-ms.date: 09/29/2017  
+ms.author: kaelliauthor: KathrynEE
+monikerRange: '>= tfs-2013'
+ms.date: 04/27/2018  
 ---
 
 
-# Create managed queries to list, update, or chart work items    
+# About managed queries  
 
-[!INCLUDE [temp](../_shared/version-vsts-tfs-all-versions.md)]
+[!INCLUDE [temp](../_shared/version-vsts-tfs-all-versions.md)]
 
 A query lists a filtered set of work items. You can initiate a query using the [query editor](using-queries.md). Optionally, you can perform an adhoc search using the [search box](search-box-queries.md). 
 
@@ -70,11 +72,27 @@ If you are looking for a specific work item, use the adhoc search box. If you wa
 > |-  [All child items of a single epic ](linking-attachments.md)<br/>- [All related items](linking-attachments.md)<br/>- [Items with one or more attachments](linking-attachments.md)<br/>- [Items with 2 or more hyperlinks](linking-attachments.md) <br/>- [Items containing external links](linking-attachments.md) |- [Items containing a specific tag](add-tags-to-work-items.md)<br/>- [Items that don't contain a specific tag](add-tags-to-work-items.md)<br/>- [Items that contain two or more tags ](add-tags-to-work-items.md) |- [List bugs and linked test cases](build-test-integration.md#linked-bugs)<br/>- [List automated test cases](build-test-integration.md)<br/>- [List requirement-based test suites](build-test-integration.md)<br/>- [List query-based test suites](build-test-integration.md) |    
 
 
-## Get started with queries 
+::: moniker range="vsts"
+
+> [!div class="mx-tdBreakAll"]  
+> |Team focus |  
+> |-------------| 
+> |- [Assigned to a member of a team](query-by-workflow-changes.md#group)<br/>- [Assigned to a team's area path](query-by-area-iteration-path.md#team-area-path)<br/>- [Assigned to a team's current sprint](query-by-date-or-current-iteration.md#current-iteration)<br/>- [Assigned to a team's sprint window](query-by-date-or-current-iteration.md#current-iteration-plus-minus-n) |
+
+::: moniker-end
+
+::: moniker range=">= tfs-2013 <= tfs-2018"
+
+> [!div class="mx-tdBreakAll"]  
+> |Team focus |  
+> |-------------| 
+> |- [Assigned to a member of a team](query-by-workflow-changes.md#group)<br/>- [Assigned to a team's current sprint](query-by-date-or-current-iteration.md#current-iteration)  |
+
+::: moniker-end
 
 
 
-## Related notes
+## Related articles
 
 - [Work item field index](../work-items/guidance/work-item-field.md)   
 - [Query permissions](set-query-permissions.md)  

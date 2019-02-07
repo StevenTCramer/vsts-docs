@@ -1,9 +1,11 @@
 ---
-title: Agile tools and terms defined for VSTS & TFS  
-description: Key definitions for objects and items used to track work - Visual Studio Team Services (VSTS) and Team Foundation 
-ms.technology: vs-devops-wit
-ms.prod: vs-devops-alm
+title: Agile tools and terms 
+titleSuffix: VSTS & TFS
+description: Key definitions for objects and items used to track work in Visual Studio Team Services & Team Foundation Server
+ms.technology: devops-agile
+ms.prod: devops
 ms.assetid:  
+ms.topic: conceptual
 ms.manager: douge
 ms.author: kaelli
 ms.date: 09/06/2017
@@ -11,7 +13,7 @@ ms.date: 09/06/2017
 
 # Agile glossary 
 
-[!INCLUDE [temp](../_shared/version-vsts-tfs-all-versions.md)]
+[!INCLUDE [temp](../_shared/version-vsts-tfs-all-versions.md)]
 
 The Microsoft Agile glossary is a short dictionary of terms used in tracking work using Agile tools on the Visual Studio Team Services (VSTS) and Team Foundation Server platforms. See also: 
 - [Work item field index](guidance/work-item-field.md)   
@@ -28,7 +30,7 @@ A family of engineering best processes with a goal of enabling rapid delivery of
 
 
 ## Agile tools
-A suite of web-based tools used to track work and support Agile methodologies. Agile tools support the core Agile methods—Scrum and Kanban—used by software development teams today. Learn more: [About Agile tools and Agile project management](../backlogs/overview.md).
+A suite of web-based tools used to track work and support Agile methodologies. Agile tools support the core Agile methods&mdash;Scrum and Kanban&mdash;used by software development teams today. Learn more: [About Agile tools and Agile project management](../backlogs/overview.md).
 
 ## Area path
 A node on the Common Structure Services hierarchy that represents a feature area. Area paths allow you to group work items by team, product, or feature area. Whereas, iteration paths allow you to group work into sprints, milestones, or other event-specific or time-related period. The area path allows you to define a hierarchy of paths. Learn more: [About area and iteration paths](../customize/about-areas-iterations.md).
@@ -66,8 +68,8 @@ Specifies both work item fields and global lists that multiple team projects and
 Specifies the set of work item types that you don't want users to create manually. By default this set includes:   
 -   [Code Review Request and Code Review Response](../../tfvc/day-life-alm-developer-suspend-work-fix-bug-conduct-code-review.md )    
 -   [Feedback Request and Feedback Response](../../feedback/get-feedback.md)    
--   [Shared Steps and Shared Parameter](../../manual-test/getting-started/create-test-cases.md)    
--   [Test Plan and Test Suite](../../manual-test/getting-started/create-a-test-plan.md)  
+-   [Shared Steps and Shared Parameter](../../test/create-test-cases.md)    
+-   [Test Plan and Test Suite](../../test/create-a-test-plan.md)  
   
 You can use [TFS Team Project Manager](https://github.com/jelledruyts/TfsTeamProjectManager), an open-source client available from github to quickly determine which WITs belong to the Hidden Types Category. 
 
@@ -136,7 +138,7 @@ An interactive board of work items that support reviewing and updating tasks def
 
 
 ## Team 
-With teams, enterprises can sub-categorize work to better focus on all the work they're tracking within a team project. Each team gets access to a suite of Agile tools and team assets. These tools provide teams the ability to work autonomously and collaborate with other teams across the enterprise. Each team can configure and customize each tool to meet their work requirements. Learn more: [About teams and Agile tools](../../teams/about-teams-and-settings.md?toc=/vsts/work/scale/toc.json&bc=/vsts/work/scale/breadcrumb/toc.json). 
+With teams, enterprises can sub-categorize work to better focus on all the work they're tracking within a team project. Each team gets access to a suite of Agile tools and team assets. These tools provide teams the ability to work autonomously and collaborate with other teams across the enterprise. Each team can configure and customize each tool to meet their work requirements. Learn more: [About teams and Agile tools](../../settings/about-teams-and-settings.md?toc=/vsts/work/scale/toc.json&bc=/vsts/work/scale/breadcrumb/toc.json). 
 
 ## Team project
 

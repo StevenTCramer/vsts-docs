@@ -1,17 +1,20 @@
 ---
 title: VSTS - Data Protection
 description: Learn how Microsoft protects your Visual Studio Team Services (VSTS) projects and data. Microsoft is committed to making sure that your VSTS projects stay safe and secure, without exception. 
-ms.prod: vs-devops-alm
-ms.technology: vs-devops-articles
-ms.manager: douge
+ms.prod: devops
+ms.topic: article
+ms.technology: devops-whitepapers
 ms.author: mlearned
-ms.date: 11/21/2017
+author: mlearned
+ms.manager: douge
+ms.date: 05/3/2018
+monikerRange: 'vsts'
 ---
 
 
 # Data Protection Overview
 
-**VSTS**
+**Microsoft Visual Studio Team Services (VSTS)**
 
 Microsoft Visual Studio Team Services (VSTS) is a cloud-hosted application for
 your development projects, from planning through deployment. Based on
@@ -154,7 +157,7 @@ cases, these backups are also replicated in a paired data center to ensure
 we can recover from a data center outage.
 
 In addition, we perform a "soft delete" for account deletion operations. 
-This lets us recover entire accounts for up to 90 days after deletion.
+This lets us recover entire accounts for up to 30 days after deletion.
 
 ### Practice is critical 
 
@@ -166,7 +169,7 @@ practice restoring various data sets from backup.  The geo-redundant
 storage that we get from Azure is tested regularly. In addition, from 
 time to time we restore from backups to recover from human error, 
 such as when a customer has inadvertently deleted  a VSTS team project. While our turnaround time sometimes takes more than day, we have always 
-been able to restore the customer’s data given enough time.  Since 
+been able to restore the customer's data given enough time.  Since 
 there are many permutations of disaster and data corruption 
 scenarios, we continue to plan and execute new tests on a regular basis 
 to ensure our systems and associated process are up to the challenge. 
@@ -282,6 +285,12 @@ configurations errors or other security gaps in a controlled process.
 The team reviews the results to identify other areas of improvement and
 to increase the quality of the preventative systems and training.
 
+### Reporting Security Issues
+If during your penetration testing you believe you have discovered a potential security flaw related to the VSTS service, please report it to Microsoft within 24 hours by following the instructions on the [Report a Computer Security Vulnerability](https://technet.microsoft.com/en-us/security/ff852094) page.
+
+>[!IMPORTANT]
+>While notifying Microsoft of penetration testing activities is no longer required, customers must still comply with the [Microsoft Cloud Unified Penetration Testing Rules of Engagement](https://technet.microsoft.com/en-us/mt784683)
+
 ### Restricting access
 
 We maintain strict control over who has access to our production
@@ -368,11 +377,12 @@ legitimate reasons.
 
 The General Data Protection Regulation (GDPR) is the biggest change in data protection laws 
 in Europe since the 1995 introduction of the European Union (EU) Data Protection Directive 95/46/EC. 
-The GDPR’s main objective is to strengthen the protection and security of your personal data and 
-will replace the Directive and all local laws relating to it. VSTS is committed to achieving compliance 
-with the GDPR when enforcement begins on May 25, 2018 and is mindful of your own compliance efforts and duties. 
-To learn more about this new regulation, please visit the following page in [Microsoft’s Trust Center](https://www.microsoft.com/en-us/TrustCenter/Privacy/gdpr/default.aspx).
-
+The GDPR's main objective is to strengthen the protection and security of your personal data and 
+will replace the Directive and all local laws relating to it. VSTS is relied upon as system of record with strict 
+integrity, traceability and audit rules, we view all information within VSTS to be business critical and therefore cannot be modified from its original state. 
+These existing obligations supersede nominal delete and retention obligations from GDPR. As such, we do not support GDPR delete requests from within VSTS. 
+We have ensured that when an entire VSTS account is deleted that all associated data and telemetry about that account and its members are removed from our system (after the requisite 30-day soft-delete period).
+To learn more about this new regulation, please visit the following page in [Microsoft's Trust Center](https://www.microsoft.com/en-us/TrustCenter/Privacy/gdpr/default.aspx).
 
 ### Data residency and sovereignty
 
@@ -386,7 +396,6 @@ customer data outside of the chosen region. Our backup procedures geo-replicates
 customer data between a second data center within the same region 
 except for accounts located in Brazil, these are replicated to South Central US 
 for disaster recovery purposes.
-
 
 ### Law enforcement access
 
@@ -591,7 +600,7 @@ your review and education. These include:
 -   [Developer Services Agreement](http://www.visualstudio.com/support/terms-of-service-vs)
 -   [Brian Harry's blog](http://blogs.msdn.com/b/bharry/)
 -   [Azure trust center](http://azure.microsoft.com/support/trust-center/)
--   [Microsoft Security Development Lifecycle](http://www.microsoft.com/security/sdl/)
+-   [Microsoft Security Development Lifecycle](http://www.microsoft.com/sdl/)
     
 *(c) 2016 Microsoft Corporation. All rights reserved. This document is
 provided "as-is." Information and views expressed in this document,

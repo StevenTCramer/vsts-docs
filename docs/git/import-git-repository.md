@@ -2,23 +2,48 @@
 title: Import a Git repo into your team project | VSTS & TFS
 description: Import a repo from GitHub, GitLab, or Bitbucket into your VSTS/TFS Team Project
 ms.assetid: 5439629e-23fd-44f1-a345-f00a435f1430
-ms.prod: vs-devops-alm
-ms.technology: vs-devops-git 
-ms.topic: get-started-article
+ms.prod: devops
+ms.technology: devops-code-git 
 ms.manager: douge
 ms.author: sdanie
-ms.date: 12/21/2017
+author: steved0x
+ms.topic: quickstart
+ms.date: 04/25/2018
+monikerRange: '>= tfs-2013'
 ---
+
 
 # Import a Git repo
 #### VSTS | TFS 2018 | TFS 2017 Update 1
 
 This guide shows you how to import an existing Git repo from GitHub, Bitbucket, GitLab, or other location into a new or empty existing repo in your VSTS project.
 
+::: moniker range=">= tfs-2017 <= tfs-2018"
+
+>[!IMPORTANT]
+>The **Import repository** feature is currently not working if you are importing a GitHub repo using TFS 2017.1 to TFS 2018.1. For more information about this issue, see [Weak cryptographic standards removal notice](https://githubengineering.com/crypto-removal-notice/) and [Unable to connect to GitHub due to TLS 1.2 only change](https://developercommunity.visualstudio.com/content/problem/201457/unable-to-connect-to-github-due-to-tls-12-only-cha.html)
+
+There are several workarounds to this issue:
+* You can import a GitHub repo into TFS using the steps in [Manually import a repo](#manually-import-a-repo).
+* You can set a machine-wide .NET registry key on your Application Tier servers to enable them to use all available TLS protocol versions. After setting these registry keys, you will need to recycle the TFS application pools (or restart the servers) for the settings to be activated. Open an elevated command prompt and run the following commands to set the registry keys.
+ 
+     ```
+      reg add HKLM\SOFTWARE\Microsoft\.NETFramework\v4.0.30319 /v SystemDefaultTlsVersions /t REG_DWORD /d 1 /f /reg:64
+      reg add HKLM\SOFTWARE\Microsoft\.NETFramework\v4.0.30319 /v SystemDefaultTlsVersions /t REG_DWORD /d 1 /f /reg:32
+     ```
+
+* On your Application Tier servers, you can modify the web.config file to change the targetFramework from `<httpRuntime targetFramework="4.5"` to `<httpRuntime targetFramework="4.6"`.
+
+This issue is resolved starting with [Team Foundation Server 2018 Update 2 RC1 and higher](/visualstudio/releasenotes/tfs2018-update2).
+
+::: moniker-end
+
 ## Prerequisites
 
-* A VSTS account. If you don’t have one, you can [sign up](../accounts/create-account-msa-or-work-student.md) for one for free. Each account includes free, unlimited private Git repositories.
-  * If you are using TFS, you must have TFS 2017 Update 1 or higher. For instructions on manually importing a Git repo using TFS 2017 RTM, see [Manually import a repo](#manually-import-a-repo).
+* A VSTS account. If you don't have one, you can [sign up](../accounts/create-account-msa-or-work-student.md) for one for free. Each account includes free, unlimited private Git repositories.
+  * If you are using TFS, you must have TFS 2017 Update 1 or higher. For instructions on manually importing a Git repo using TFS 2017 RTM or earlier, see [Manually import a repo](#manually-import-a-repo).
+
+::: moniker range=">= tfs-2017"
 
 ## Import into a new repo
 
@@ -41,9 +66,12 @@ On the **Files** page of the empty Git repository, select **Import** and [enter 
 >[!NOTE]
 >The import feature disables automated linking for work items mentioned in a commit comment since the work item IDs in the destination project might not be the same as ones in the source project. Automatic linking for work items mentioned in a commit can be re-enabled by navigating to **Settings**, **Version Control**,  selecting your repository, and choosing **Options**. For more information on linking commits with work items, see [How do I associate my commits with work items?](share-your-code-in-git-vs-2017.md#how-do-i-associate-my-commits-with-work-items)
 
+::: moniker-end
+::: moniker range=">= tfs-2013"
+
 ## Manually import a repo
 
-The import repo feature was introduced in TFS 2017 Update 1. If you are using TFS 2017 RTM, you can use the following steps to manually import a repo into TFS 2017 RTM. You can also follow these steps to manually import a repo into a VSTS repo by replacing TFS with VSTS in the following steps.
+The import repo feature was introduced in TFS 2017 Update 1. If you are using TFS 2017 RTM or earlier, you can use the following steps to manually import a repo into TFS. You can also follow these steps to manually import a repo into a VSTS repo by replacing TFS with VSTS in the following steps.
 
 0. Clone the source repo to a temporary folder on your computer using the `bare` option, as shown in the following command line example, and then navigate to the repo's folder. Note that when cloning using the `bare` option, the folder name includes the `.git` suffix. In this example, `https://github.com/contoso/old-contoso-repo.git` is the source repo to be manually imported.
 
@@ -67,10 +95,10 @@ The import repo feature was introduced in TFS 2017 Update 1. If you are using TF
     rm -rf old-contoso-repo.git
     ```
 
-
-
-
 ## Frequently asked questions
+
+::: moniker-end
+::: moniker range=">= tfs-2017"
 
 Although most of the time the import is successful, the following conditions can cause problems.
 
@@ -91,9 +119,15 @@ The import service uses the [multi_ack](https://git-scm.com/book/en/v2/Git-Inter
 If the source repository does not provide this capability, the import service can fail to import from the given source.
 This failure can happen when creating import request or while import is in progress.
 
+::: moniker-end
+::: moniker range=">= tfs-2013"
+
 ### Can I import from previous versions of Team Foundation Server?
 If the source Git repository is in a TFS version earlier than TFS 2017 RTM, then import will fail.
-This happens because of a contract mismatch between latest VSTS/TFS and pre-2017 RTM versions of TFS.
+This happens because of a contract mismatch between the latest VSTS/TFS and pre-2017 RTM versions of TFS.
+
+::: moniker-end
+::: moniker range=">= tfs-2017"
 
 ### Can I use MSA based credentials?
 Unfortunately, MSA (Microsoft Account, formerly Live ID) based credentials will not work. Import service relies on basic authentication to communicate with the source repository. If the username / password you are using are not basic auth then authentication will fail and import will fail.
@@ -110,8 +144,9 @@ You can migrate code from an existing TFVC repository to a new Git repository wi
 ## Next steps
 
 > [!div class="nextstepaction"]
-> [New to Git repos? Learn more](https://www.visualstudio.com/learn/set-up-a-git-repository/)
+> [New to Git repos? Learn more](/azure/devops/git/set-up-a-git-repository)
 
 > [!div class="nextstepaction"]
 > [Learn more about using Git in the Git tutorial](tutorial/gitworkflow.md)
 
+::: moniker-end

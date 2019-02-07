@@ -1,21 +1,23 @@
 ---
 title: Set SharePoint permissions for TFS
 description: How-to guide to set add users to SharePoint integrated with Team Foundation Server (TFS)
-ms.prod: vs-devops-alm
-ms.technology: vs-devops-admin
+ms.prod: devops
+ms.technology: devops-security
+ms.topic: conceptual
 ms.assetid: 
 toc: show
 ms.manager: douge
 ms.author: kaelli
+author: KathrynEE
 ms.date: 10/02/2017
+monikerRange: '>= tfs-2013 <= tfs-2017'
 ---
 
+# Set SharePoint site permissions
 
-# Set SharePoint site permissions 
+**TFS 2017 | TFS 2015 | TFS 2013**
 
-**TFS 2017 | TFS 2015 | TFS 2013**  
-
-> [!IMPORTANT]  
+> [!IMPORTANT]
 > Integration with a SharePoint site is only supported for on-premises TFS. For information on what is supported for VSTS, see [Dashboards and reports overview](../report/overview.md). If you don't have a site and want to add it, see [Configure or add a project portal](../report/sharepoint-dashboards/configure-or-add-a-project-portal.md). 
 
 ## Add users to SharePoint site
@@ -51,7 +53,7 @@ or they won't be able to view or edit those reports.
 
 	-   **Site Collection Administrators** group for all site collections that the deployment of Team Foundation Server uses
 
-	![Follow instructions for your version of SharePoint](../tfs-server/_img/add-administrator-tfs/people-and-groups.png)
+	![Follow instructions for your version of SharePoint](/tfs/server/_img/add-administrator-tfs/people-and-groups.png)
 
 
 
@@ -90,7 +92,7 @@ where *ReportServer* represents the name of the server that is running SQL Serve
 
         ![Choose the role assignment for the user or group](../accounts/_img/add-users-team-project/assign-rs-role.png)
 
-If you're a member of [Team Foundation Administrators](../tfs-server/add-administrator-tfs.md),
+If you're a member of [Team Foundation Administrators](/tfs/server/admin/add-administrator-tfs),
 you can verify what features are available for your users by default,
 and see whether any users are members of groups that have access outside of the default level.
 

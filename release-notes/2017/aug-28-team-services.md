@@ -2,8 +2,8 @@
 title: Customizable work item rules – VSTS Sprint 122 Update
 description: Visual Studio Team Services (VSTS) release notes for Sprint 122 Update on August 28 2017 with customizable work item rules, forks, and work items hub.
 ms.ContentId: 1d14aa73-d447-4d5e-8ea4-f1890b1d5c29
-ms.prod: vs-devops-alm
-ms.technology: vs-devops-articles
+ms.prod: devops
+ms.technology: vsts-release-notes
 ms.author: alexn
 author: alexn
 ---
@@ -187,7 +187,7 @@ For new repositories and new projects, administrators will no longer be granted 
 
 ### CI builds for Bitbucket repositories
 
-It's now possible to run CI builds from connected Bitbucket repositories. To get started, set up a [service endpoint to connect to Bitbucket](/vsts/build-release/concepts/library/service-endpoints). Then in your build definition, on the Tasks tab select the Bitbucket source.
+It's now possible to run CI builds from connected Bitbucket repositories. To get started, set up a [service endpoint to connect to Bitbucket](/vsts/pipelines/library/service-endpoints). Then in your build definition, on the Tasks tab select the Bitbucket source.
 
 > [!div class="mx-imgBorder"]
 ![get sources bitbucket repo](_img/08_28_25.png)
